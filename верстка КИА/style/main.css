@@ -1,0 +1,36 @@
+body {
+    background-image: url(../images/bg.jpg); /* вставка картиночки */
+    background-size: 100%;
+}
+.head {
+    position: fixed; /* фиксация к топу */
+    top: 0; /* плотно к краям */
+    left: 0;
+    height: 60px; /* размер блока */
+    width: 100%;
+    background-color: #ffffff;
+}
+.text_head {
+    margin-bottom: -100px;
+    display: inline;
+    font-family: KiaM;
+    border: 2px solid black;
+}
+.main_block {
+    position: absolute;
+    top: 60px;
+}
+
+
+
+
+
+/* подключаем шрифты */
+@font-face {
+/* // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) */
+font-family: "KiaM";
+/* // адрес шрифта и тип */
+src: url("../fonts/KIAM.TTF") format("truetype");
+font-style: normal;
+font-weight: normal;
+}
