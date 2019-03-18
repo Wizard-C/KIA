@@ -8,26 +8,25 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style/main.css">
-
     <title>KIA</title>
   </head>
-  <body style="color: white">
 
+  <body class="body">
       <!-- head -->
-      <div class="container-fluid" style="border: 3px solid black;">
-          <div class="row">
-              <div class="col-3"></div>
+      <div class="container-fluid">
+          <div class="row" style="background: white;">
+              <div class="col-2"></div>
               <div class="col">
-                icon
+                <img src="images/KIA_icon.png" alt="" style="height: 60px; padding: 10px;">
               </div>
-              <div class="col-3"></div>
-              <div class="col">
+              <div class="col-2"></div>
+              <div class="col head_text">
                 +7 (342) 249-30-03
               </div>
-              <div class="col">
+              <div class="col head_text">
                 Вега-Моторс
               </div>
-              <div class="col">
+              <div class="col head_text">
                 Пермь
               </div>
               <div class="col"></div>
@@ -35,37 +34,105 @@
       </div>
 
       <!-- MAIN -->
-      <div class="container" style="border: 3px solid black;">
+      <div class="container">
+          <!-- slaider -->
           <div class="row">
-              <div class="col">OPTIMA</div>
+              <div class="col" style="text-align: center;"> <img src="images/slaider_test.png" alt="" style=""> </div>
+          </div>
+          <div class="row">
+              <div class="col"> <h1 id="optima" >OPTIMA</h1></div>
           </div>
           <div class="row">
               <div class="col">
-                Выгода до
-                120 000 руб
+                  <p class="text_title_min">Выгода до</p>
+                  <p class="text_title_max">120 000 руб</p>
               </div>
               <div class="col">
-                Осталось в продаже
-                8 автомобилей
+                  <p class="text_title_min">Осталось в продаже</p>
+                  <p class="text_title_max">8 автомобилей</p>
               </div>
            </div>
+
            <!-- img -->
-           <div class="row" style="border: 3px solid black;">
-               <div class="col">img</div>
+           <div class="row">
+               <div class="col">
+                   <img src="images/KIA_main.png" alt="KIA" id="KIA_main">
+               </div>
            </div>
-           <!-- menu -->
-           <div class="row" style="border: 3px solid black;">
-               <div class="col" style="border: 3px solid black; ">Тест-драйв</div>
-               <div class="col" style="border: 3px solid black; margin-left: 5%">Подробнее</div>
-               <div class="col" style="border: 3px solid black; margin-left: 5%">Консультация</div>
+
+           <!-- button -->
+           <div class="row">
+               <div class="col button shadow-lg" >                       <a href="Https://google.com" class="button_text">Тест-драйв</a>    <img class="button_icon" src="images/test-drive.png" alt="Тест драйв"> </div>
+               <div class="col button shadow-lg" style="margin-left: 5%"><a href="Https://google.com" class="button_text">Подробнее</a>     <img class="button_icon" src="images/info.png" alt="Подробнее"> </div>
+               <div class="col button shadow-lg" style="margin-left: 5%"><a href="Https://google.com" class="button_text">Консультация</a>  <img class="button_icon" src="images/support.png" alt="Консультация"> </div>
            </div>
+
            <!-- line_price -->
-           <div class="row" style="border: 3px solid black;">
-               <div class="col" style="border: 3px solid black; ">price</div>
+           <div class="row" >
+               <div class="col"> <img src="images/active.png" alt="" style="width: 100%; margin: 30px;"> </div>
            </div>
-           <!-- slaider price -->
-           <div class="row" style="border: 3px solid black;">
-               <div class="col" style="border: 3px solid black; ">slider</div>
+
+           <!-- slaider -->
+           <div class="row">
+               <div class="col" style="padding-left:4%; padding-right:6%;">
+                   <div class="catalog">
+                       <img src="images/stinger.png" alt="stinger" сlass="car" style="width: 100%">
+                       <div style="height:80px;"> <h2 class="car_name">STINGER</h2></div>
+                       <p class="remainder">Осталось в продаже:</p>
+                       <p class="remainder_b">4 автомобиля</p>
+                       <p style="color: rgb(179, 16, 28); font-size: 22px; text-align: center;" сlass="discount">Выгода: 56 000 руб.</p>
+                       <div class="img_slider_div">
+                           <img class="img_slaider_solo" src="images/Test-Drive.svg" alt="">
+                           <img class="img_slaider_solo" src="images/Info.svg" alt="">
+                           <img class="img_slaider_solo" src="images/Support.svg" alt="">
+                       </div>
+                   </div>
+               </div>
+
+               <div class="col" style="padding-left:3%; padding-right:6%;">
+                   <div class="catalog">
+                       <img src="images/sorento.png" alt="SORENTO XM Comfort 2,4L GAS AT" class="car">
+                       <div style="height:80px;"> <h2 class="car_name">SORENTO XM Comfort 2,4L GAS AT</h2></div>
+                       <p class="remainder">Осталось в продаже:</p>
+                       <p class="remainder_b">6 автомобиля</p>
+                       <p style="color: rgb(179, 16, 28); font-size: 22px; text-align: center;" сlass="discount">Выгода: 69 000 руб.</p>
+                       <div class="img_slider_div">
+                           <img class="img_slaider_solo" src="images/Test-Drive.svg" alt="">
+                           <img class="img_slaider_solo" src="images/Info.svg" alt="">
+                           <img class="img_slaider_solo" src="images/Support.svg" alt="">
+                       </div>
+                   </div>
+               </div>
+
+               <div class="col" style="padding-left:3%; padding-right:4%;">
+                   <div class="catalog">
+                       <img src="images/ceed.png" alt="Новый CEED JD PE Comfort 1,6L GAS MT" class="car">
+                       <div style="height:80px;"> <h2 class="car_name">Новый CEED JD PE Comfort 1,6L GAS MT</h2></div>
+                       <p class="remainder">Осталось в продаже:</p>
+                       <p class="remainder_b">5 автомобиля</p>
+                       <p style="color: rgb(179, 16, 28); font-size: 22px; text-align: center;" сlass="discount">Выгода: 39 000 руб.</p>
+                       <div class="img_slider_div">
+                           <img class="img_slaider_solo" src="images/Test-Drive.svg" alt="">
+                           <img class="img_slaider_solo" src="images/Info.svg" alt="">
+                           <img class="img_slaider_solo" src="images/Support.svg" alt="">
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <!-- bot -->
+           <div class="row" style="margin:50px;">
+               <div class="col-3"></div>
+               <div class="col">
+                 +7 (342) 249-30-03
+               </div>
+               <div class="col">
+                 Вега-Моторс
+               </div>
+               <div class="col">
+                 Пермь
+               </div>
+               <div class="col-3"></div>
            </div>
       </div>
 
