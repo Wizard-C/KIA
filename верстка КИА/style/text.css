@@ -1,51 +1,72 @@
-#slides {
-    position: relative;
-    height: 300px;
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
+body {
+  padding: 10px;
 }
 
-.slide {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 1;
-
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
+.carousel {
+  position: relative;
+  width: 398px;
+  padding: 10px 40px;
+  border: 1px solid #CCC;
+  border-radius: 15px;
+  background: #eee;
 }
 
-.showing {
-    opacity: 1;
-    z-index: 2;
+.carousel img {
+  width: 130px;
+  height: 130px;
+  /* по умолчанию inline, в ряде браузеров это даст лишнее пространство вокруг элементов */
+
+  display: block;
 }
 
-.slide {
-    font-size: 40px;
-    padding: 40px;
-    box-sizing: border-box;
-    background: #333;
-    color: #fff;
+.arrow {
+  position: absolute;
+  top: 60px;
+  padding: 0;
+  background: #ddd;
+  border-radius: 15px;
+  border: 1px solid gray;
+  font-size: 24px;
+  line-height: 24px;
+  color: #444;
+  display: block;
 }
 
-.slide:nth-of-type(1) {
-    background: red;
+.arrow:focus {
+  outline: none;
 }
-.slide:nth-of-type(2) {
-    background: orange;
+
+.arrow:hover {
+  background: #ccc;
+  cursor: pointer;
 }
-.slide:nth-of-type(3) {
-    background: green;
+
+.prev {
+  left: 7px;
 }
-.slide:nth-of-type(4) {
-    background: blue;
+
+.next {
+  right: 7px;
 }
-.slide:nth-of-type(5) {
-    background: purple;
+
+.gallery {
+  width: 390px;
+  overflow: hidden;
+}
+
+.gallery ul {
+  height: 230px;
+  width: 9999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: margin-left 250ms;
+  /* remove white-space between inline-block'ed li */
+  /* http://davidwalsh.name/remove-whitespace-inline-block */
+
+  font-size: 0;
+}
+
+.gallery li {
+  display: inline-block;
 }
