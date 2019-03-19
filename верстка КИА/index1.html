@@ -1,68 +1,121 @@
 <!DOCTYPE html>
+<html>
+    <head>
+      <title>test</title>
+      <meta charset="utf-8">
+      <style type="text/css">
+      * { box-sizing: border-box;margin: 0;padding: 0; }
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style/text.css">
-</head>
+      .slider {
+          width: 300px;
+          height: 170px;
+          overflow: hidden;
+          position: relative;
+      }
 
-<body>
+      .slider__arrow {
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 50%;
+          background-color: #3294FD;
+          text-align: center;
+          line-height: 20px;
+          color: #fff;
+          z-index: 9;
+          cursor: pointer;
+      }
 
-  <div id="carousel" class="carousel">
-    <button class="arrow prev">⇦</button>
-    <div class="gallery">
-      <ul class="images">
-        <li><img src="https://js.cx/carousel/1.png"></li>
-        <li><img src="https://js.cx/carousel/2.png"></li>
-        <li><img src="https://js.cx/carousel/3.png"></li>
-        <li><img src="https://js.cx/carousel/4.png"></li>
-        <li><img src="https://js.cx/carousel/5.png"></li>
-        <li><img src="https://js.cx/carousel/6.png"></li>
-        <li><img src="https://js.cx/carousel/7.png"></li>
-        <li><img src="https://js.cx/carousel/8.png"></li>
-        <li><img src="https://js.cx/carousel/9.png"></li>
-        <li><img src="https://js.cx/carousel/10.png"></li>
-      </ul>
-    </div>
-    <button class="arrow next">⇨</button>
-  </div>
+      .slider__left { left: 0; }
+      .slider__right { right: 0; }
 
-  <script>
-    /* этот код помечает картинки, для удобства разработки */
-    var lis = document.getElementsByTagName('li');
-    for (var i = 0; i < lis.length; i++) {
-      lis[i].style.position = 'relative';
-      var span = document.createElement('span');
-      // обычно лучше использовать CSS-классы,
-      // но этот код - для удобства разработки, так что не будем трогать стили
-      span.style.cssText = 'position:absolute;left:0;top:0';
-      span.innerHTML = i + 1;
-      lis[i].appendChild(span);
-    }
+      .slider__container {
+          width: 900px;
+          height: 170px;
+          position: absolute;
+          top: 0;
+          left: 0;
+      }
 
-    /* конфигурация */
-    var width = 230; // ширина изображения
-    var count = 5; // количество изображений
+      .slider__item {
+          width: 100px;
+          height: 170px;
+          line-height: 170px;
+          background: pink;
+          display: block;
+          float: left;
+          text-align: center;
+      }
 
-    var carousel = document.getElementById('carousel');
-    var list = carousel.querySelector('ul');
-    var listElems = carousel.querySelectorAll('li');
+      .slider__item:hover {
+          background-color: #F7F7F7;
+      }
+      .slider__arrow.hide{
+        display: none;
+      }
+      .slider {
+        margin: 20px auto;
+      }
+      .slider__container.animate{
+         transition: left .8s;
+      }
+      .slider__container.left{
+        left: -100px;
+      }
+      </style>
 
-    var position = 0; // текущий сдвиг влево
+      <script>
+          window.addEventListener("DOMContentLoaded", function() {
+              var left = document.querySelector(".slider__left"),
+                  right = document.querySelector(".slider__right"),
+                  container = document.querySelector(".slider__container"),
+                  timer;
+              right.addEventListener("click", function() {
+                  window.clearTimeout(timer);
+                  var last = container.querySelector(".slider__item:last-child");
+                  var first = container.querySelector(".slider__item:first-child");
+                  container.classList.remove("animate");
+                  if (!container.classList.contains("left")) {
+                      container.classList.add("left");
+                      container.insertBefore(last, first);
+                  }
+                  timer = window.setTimeout(function() {
+                      container.classList.add("animate");
+                      container.classList.remove("left")
+                  },30)
+              });
+              left.addEventListener("click", function() {
+                  window.clearTimeout(timer);
+                  var first = container.querySelector(".slider__item:first-child");
+                  container.classList.remove("animate");
+                  if (container.classList.contains("left")) {
+                      container.classList.remove("left");
+                      container.appendChild(first)
+                  }
+                  timer = window.setTimeout(function() {
+                      container.classList.add("animate");
+                      container.classList.add("left")
+                  },30)
+              })
+          });
+      </script>
+    </head>
 
-    carousel.querySelector('.prev').onclick = function() {
-      // сдвиг влево
-      // последнее передвижение влево может быть не на 3, а на 2 или 1 элемент
-      position = Math.min(position + width * count, 0)
-      list.style.marginLeft = position + 'px';
-    };
-
-    carousel.querySelector('.next').onclick = function() {
-      // сдвиг вправо
-      // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
-      position = Math.max(position - width * count, -width * (listElems.length - count));
-      list.style.marginLeft = position + 'px';
-    };
-  </script>
-</body>
-
+    <body>
+        <div class="slider">
+            <div class="slider__arrow slider__left"><</div>
+            <div class="slider__arrow slider__right">></div>
+            <div class="slider__container">
+                <div class="slider__item">1</div>
+                <div class="slider__item">2</div>
+                <div class="slider__item">3</div>
+                <div class="slider__item">4</div>
+                <div class="slider__item">5</div>
+                <div class="slider__item">6</div>
+                <div class="slider__item">7</div>
+                <div class="slider__item">8</div>
+                <div class="slider__item">9</div>
+            </div>
+        </div>
+    </body>
 </html>
