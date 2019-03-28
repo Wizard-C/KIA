@@ -1,0 +1,193 @@
+/*  border: 2px solid black; */
+.main_calculator {
+    background: #BE1E34;
+    border-radius: 12px;
+    height: 100%;
+}
+.calculator_text_top{
+    font-size: 27px;
+    font-family: "KIAM";
+    line-height: 1.2;
+    text-align: center;
+    color: white
+}
+.calculator_text_mid{
+    font-size: 19px;
+    font-family: "Tahoma";
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    color: white
+}
+/* Кнопка */
+a.button {
+    width: 690px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    color: #D3474A;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0 -3px #991726 inset;
+    transition: 0.2s;
+}
+a.button:hover { background: #581116; }
+a.button:active {
+    background: #C6292E;
+    box-shadow: 0 3px #581116 inset;
+}
+
+/* ВЫБОРКА НА СЛАЙДЕРЕ */
+/* Default custom select styles */
+div.cs-select {
+    background: #890F21;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-align: left;
+	background: #fff;
+	z-index: 100;
+	width: 70%;
+	max-width: 500px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div.cs-select:focus {
+	outline: none; /* For better accessibility add a style for this in your skin */
+}
+
+.cs-select select {
+	display: none;
+}
+
+.cs-select span {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	padding: 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Placeholder and selected option */
+
+.cs-select > span::after,
+.cs-select .cs-selected span::after {
+	speak: none;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.cs-select > span::after {
+	content: '\25BE';
+	right: 1em;
+}
+.cs-select .cs-selected span::after {
+	content: '\2713';
+	margin-left: 1em;
+}
+.cs-select.cs-active > span::after {
+	-webkit-transform: translateY(-50%) rotate(180deg);
+	transform: translateY(-50%) rotate(180deg);
+}
+
+/* Options */
+.cs-select .cs-options {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	background: #fff;
+	visibility: hidden;
+}
+.cs-select.cs-active .cs-options {
+	visibility: visible;
+}
+.cs-select ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.cs-select ul span {
+	padding: 1em;
+}
+.cs-select ul li.cs-focus span {
+	background-color: #ddd;
+}
+/* Optgroup and optgroup label */
+.cs-select li.cs-optgroup ul {
+	padding-left: 1em;
+}
+.cs-select li.cs-optgroup > span {
+	cursor: default;
+}
+div.cs-skin-border {
+	background: transparent;
+	font-size: 1.25em;
+	font-weight: 700;
+	max-width: 600px;
+}
+@media screen and (max-width: 30em) {
+	div.cs-skin-border { font-size: 1em; }
+}
+.cs-skin-border > span {
+	border: 5px solid #000;
+	border-color: inherit;
+	-webkit-transition: background 0.2s, border-color 0.2s;
+	transition: background 0.2s, border-color 0.2s;
+}
+.cs-skin-border > span::after,
+.cs-skin-border .cs-selected span::after {
+	font-family: 'icomoon';
+	content: '\e000';
+}
+.cs-skin-border ul span::after {
+	content: '';
+	opacity: 0;
+}
+.cs-skin-border .cs-selected span::after {
+	content: '\e00e';
+	color: #ddd9c9;
+	font-size: 1.5em;
+	opacity: 1;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+.cs-skin-border.cs-active > span {
+	background: #fff;
+	border-color: #fff;
+	color: #2980b9;
+}
+.cs-skin-border .cs-options {
+	color: #2980b9;
+	font-size: 0.75em;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s, visibility 0s 0.2s;
+	transition: opacity 0.2s, visibility 0s 0.2s;
+}
+.cs-skin-border.cs-active .cs-options {
+	opacity: 1;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+.cs-skin-border ul span {
+	padding: 1em 2em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.cs-skin-border .cs-options li span:hover,
+.cs-skin-border li.cs-focus span {
+	background: #f5f3ec;
+}

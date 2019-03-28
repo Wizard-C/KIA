@@ -300,23 +300,4 @@ text-align: center
   left: -170px;
 } */
 
-/* подключаем шрифты */
-@font-face {
-/* // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) */
-font-family: "KiaM";
-/* // адрес шрифта и тип */
-src: url("../fonts/KIAM.TTF") format("truetype");
-font-style: normal;
-font-weight: normal;
-}
-
-@font-face {
-/* // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) */
-font-family: "Tahoma";
-/* // адрес шрифта и тип */
-src: url("../fonts/TAHOMA.TTF") format("truetype");
-font-style: normal;
-font-weight: normal;
-}
-
 /*  */

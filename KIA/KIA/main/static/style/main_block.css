@@ -1,0 +1,85 @@
+/* Костыли для отступов */
+.indent_1 {
+    height: 100px;
+}
+.indent_2 {
+    height: 50px;
+}
+.indent_2 {
+    height: 30px;
+}
+
+.main_block {
+    position: absolute;
+    top: 60px;
+}
+.border_block_left {
+    position: absolute;
+    top: -50px;
+    width: 60%;
+    border: 2px solid #8D2B2D;
+    background: #FCE3E3;
+}
+.border_block_right {
+    position: absolute;
+    top: -80px;
+    right: 0;
+    width: 60%;
+    border: 2px solid #8D2B2D;
+    background: #FCE3E3;
+}
+#optima{
+  font-size: 63px;
+  font-family: "KiaM";
+  text-align: center;
+}
+#KIA_main{
+    width:100%;
+}
+#shine {
+    position:absolute;
+    top:70%;
+    width:100%;
+}
+
+.text_title_min{
+    color: #5A0B0F;
+    font-size: 20px;
+    font-family: "Tahoma";
+    line-height: 1.2;
+    text-align: center;
+}
+.text_title_max{
+    color: #5A0B0F;
+    font-size: 32px;
+    font-family: "Tahoma";
+    line-height: 1.2;
+    text-align: center;
+}
+.button {
+    padding: 12px;
+    background: #500202; /* фон кнопки */
+    outline: none; /* убирать контур в Mozilla */
+    transition: 0.2s;
+    border-radius: 6px;
+}
+div.button:hover { background: #6D2642; } /* при наведении курсора мышки */
+div.button:active { background: rgb(152,15,0); } /* при нажатии */
+.button_icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+.button_text{
+  color: #fff; /* цвет текста */
+  font-size: 16px;
+  font-family: "KiaM";
+  line-height: 1.2;
+  margin: 9px;
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  padding: .4em 1.5em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+}

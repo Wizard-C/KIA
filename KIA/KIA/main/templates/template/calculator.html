@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Optima</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="{% static 'style/font.css' %}">
+        <link rel="stylesheet" href="{% static 'style/head_bg.css' %}">
+        <link rel="stylesheet" href="{% static 'style/main_block.css' %}"> -->
+        <link rel="stylesheet" href="{% static 'style/calculator.css' %}">
+    </head>
+    <body style="background: #58090D">
+        <div class="container main_calculator">
+            <p class="calculator_text_top">Trade-In Калькулятор</p>
+            <br>
+            <p class="calculator_text_mid">Получи выгоду от Trade-In!<br> Оцени свой старый автомобиль прямо сейчас!</p>
+            <div class="row">
+                <div class="col-6">
+                <section>
+    				<select class="cs-select cs-skin-border">
+    					<option value="" disabled selected>Марка автомобиля</option>
+    					<option value="">RIO</option>
+    					<option value="">Optima</option>
+    					<option value="">Picanto</option>
+    					<option value="">Soul</option>
+    				</select>
+    			</section>
+                </div>
+                <div class="col-6">
+                <section>
+    				<select class="cs-select cs-skin-border">
+    					<option value="" disabled selected>Марка автомобиля</option>
+    					<option value="">RIO</option>
+    					<option value="">Optima</option>
+    					<option value="">Picanto</option>
+    					<option value="">Soul</option>
+    				</select>
+    			</section>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-6">
+                <section>
+    				<select class="cs-select cs-skin-border">
+    					<option value="" disabled selected>Марка автомобиля</option>
+    					<option value="">RIO</option>
+    					<option value="">Optima</option>
+    					<option value="">Picanto</option>
+    					<option value="">Soul</option>
+    				</select>
+    			</section>
+                </div>
+                <div class="col-6">
+                <section>
+    				<select class="cs-select cs-skin-border">
+    					<option value="" disabled selected>Марка автомобиля</option>
+    					<option value="">RIO</option>
+    					<option value="">Optima</option>
+    					<option value="">Picanto</option>
+    					<option value="">Soul</option>
+    				</select>
+    			</section>
+                </div>
+            </div>
+            <br>
+
+            <a href="#" class="button">Оценить</a>
+        </div>
+        <script src="{% static 'js/calculator.js' %}"></script>
+        <script>
+            (function() {
+                [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+                    new SelectFx(el);
+                } );
+            })();
+        </script>
+    </body>
+</html>

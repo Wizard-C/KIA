@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Optima</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'style/font.css' %}">
+        <link rel="stylesheet" href="{% static 'style/head_bg.css' %}">
+        <link rel="stylesheet" href="{% static 'style/main_block.css' %}">
+    </head>
+    <body>
+        {% include 'template/head.html' %}
+        <!-- Пример оптимы -->
+        <!-- По сути костыль который нужен для отступа эллемента... -->
+        <div class="indent_1"></div>
+        <div class="container main">
+            <!-- slaider -->
+            <div class="row">
+                <div class="col" style="text-align: center;"> <img src="{% static 'images/slaider_test.png' %}"> </div>
+            </div>
+            <div class="row">
+                <div class="col"> <h1 id="optima" >OPTIMA</h1></div>
+            </div>
+            <!-- По сути костыль который нужен для отступа эллемента... -->
+            <div class="indent_2"></div>
+            <div class="row">
+                <div class="col">
+                    <div class="border_block_left">
+                        <p class="text_title_min">Выгода до</p>
+                        <p class="text_title_max">120 000 руб</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border_block_right">
+                        <p class="text_title_min">Осталось в продаже</p>
+                        <p class="text_title_max">8 автомобилей</p>
+                    </div>
+                </div>
+             </div>
+
+             <!-- img -->
+             <div class="row">
+                 <div class="col">
+                     <img src="{% static 'images/KIA_main.png' %}" alt="KIA" id="KIA_main">
+                 </div>
+             </div>
+             
+             <!-- По сути костыль который нужен для отступа эллемента... -->
+             <div class="indent_3"></div>
+             <!-- Кнопки -->
+             <div class="row">
+                 <div class="col button shadow-lg" >                       <a href="Https://google.com" class="button_text">Тест-драйв</a>    <img class="button_icon" src="{% static 'images/test-drive.png' %}" alt="Тест драйв"> </div>
+                 <div class="col button shadow-lg" style="margin-left: 5%"><a href="Https://google.com" class="button_text">Подробнее</a>     <img class="button_icon" src="{% static 'images/info.png' %}" alt="Подробнее"> </div>
+                 <div class="col button shadow-lg" style="margin-left: 5%"><a href="Https://google.com" class="button_text">Консультация</a>  <img class="button_icon" src="{% static 'images/support.png' %}" alt="Консультация"> </div>
+             </div>
+
+
+             <!-- line_price -->
+             <div class="row" >
+                 <div class="col"> <img src="{% static 'images/active.png' %}" alt="" style="width: 100%; margin: 30px;"> </div>
+             </div>
+        </div>
+    </body>
+</html>

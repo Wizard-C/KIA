@@ -1,0 +1,19 @@
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    # Основные страницы
+    # path('', views.home, name='home'),
+    # path('delivery/', views.delivery, name='delivery'),
+    # path('pay/', views.pay, name='pay'),
+    # path('equipment/', views.equipment, name='equipment'),
+    # path('contacts/', views.contacts, name='contacts'),
+    # path('compani/', views.compani, name='compani'),
+
+    #Шаблоны
+    path('head/', views.head, name='head'),
+    path('foot/', views.foot, name='foot'),
+    path('calculator/', views.calculator, name='calculator'),
+    path('', views.demo, name='dem'),
+]
