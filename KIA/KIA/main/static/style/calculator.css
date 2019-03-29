@@ -2,11 +2,10 @@
 .main_calculator {
     background: #BE1E34;
     border-radius: 12px;
-    height: 100%;
 }
 .calculator_text_top{
     font-size: 27px;
-    font-family: "KIAM";
+    font-family: "KiaM";
     line-height: 1.2;
     text-align: center;
     color: white
@@ -19,11 +18,12 @@
     text-align: center;
     color: white
 }
+.option_block{
+}
 /* Кнопка */
 a.button {
-    width: 690px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 350px;
+    height: 50px;
     font-weight: 700;
     color: #D3474A;
     text-decoration: none;
@@ -31,18 +31,25 @@ a.button {
     border-radius: 6px;
     background: white;
     box-shadow: 0 -3px #991726 inset;
-    transition: 0.2s;
+    transition: 0.3s;
+    margin: auto;
+    text-align: center;
+    font-family: "KiaM"
 }
 a.button:hover { background: #581116; }
 a.button:active {
-    background: #C6292E;
+    background: #F9F9EB;
     box-shadow: 0 3px #581116 inset;
+}
+.parent {
+text-align: center;
+height: 75px;
 }
 
 /* ВЫБОРКА НА СЛАЙДЕРЕ */
 /* Default custom select styles */
 div.cs-select {
-    background: #890F21;
+    color: white;
 	display: inline-block;
 	vertical-align: middle;
 	position: relative;
@@ -58,7 +65,19 @@ div.cs-select {
 	-ms-user-select: none;
 	user-select: none;
 }
-
+div.left_top{
+    z-index: 110;
+    position: absolute;
+    right: 0;
+}
+div.left_bot{
+    z-index: 100;
+    position: absolute;
+    right: 0;
+}
+div.right_top{
+    z-index: 110;
+}
 div.cs-select:focus {
 	outline: none; /* For better accessibility add a style for this in your skin */
 }
@@ -66,7 +85,7 @@ div.cs-select:focus {
 .cs-select select {
 	display: none;
 }
-
+/* основная настройка */
 .cs-select span {
 	display: block;
 	position: relative;
@@ -90,6 +109,7 @@ div.cs-select:focus {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* Эти строки тоже отвечают за иконки на выборке */
 .cs-select > span::after {
 	content: '\25BE';
 	right: 1em;
@@ -120,12 +140,6 @@ div.cs-select:focus {
 	padding: 0;
 	width: 100%;
 }
-.cs-select ul span {
-	padding: 1em;
-}
-.cs-select ul li.cs-focus span {
-	background-color: #ddd;
-}
 /* Optgroup and optgroup label */
 .cs-select li.cs-optgroup ul {
 	padding-left: 1em;
@@ -135,24 +149,26 @@ div.cs-select:focus {
 }
 div.cs-skin-border {
 	background: transparent;
-	font-size: 1.25em;
+	font-size: 0.9em;
 	font-weight: 700;
 	max-width: 600px;
 }
 @media screen and (max-width: 30em) {
 	div.cs-skin-border { font-size: 1em; }
 }
+/* настройка визуала неактивного */
 .cs-skin-border > span {
-	border: 5px solid #000;
+    background: #890F21;
+    border-radius: 6px;
 	border-color: inherit;
-	-webkit-transition: background 0.2s, border-color 0.2s;
-	transition: background 0.2s, border-color 0.2s;
+	transition: 0.5s;
 }
-.cs-skin-border > span::after,
+/* ЭТИ СТРОКИ ОТВЕЧАЮТ ЗА СТРЕЛОЧКИ */
+/* .cs-skin-border > span::after,
 .cs-skin-border .cs-selected span::after {
 	font-family: 'icomoon';
 	content: '\e000';
-}
+} */
 .cs-skin-border ul span::after {
 	content: '';
 	opacity: 0;
@@ -162,25 +178,24 @@ div.cs-skin-border {
 	color: #ddd9c9;
 	font-size: 1.5em;
 	opacity: 1;
-	-webkit-transition: opacity 0.2s;
-	transition: opacity 0.2s;
+	transition: 0.5s;
 }
 .cs-skin-border.cs-active > span {
+    border-radius: 0px;
 	background: #fff;
 	border-color: #fff;
 	color: #2980b9;
 }
 .cs-skin-border .cs-options {
 	color: #2980b9;
-	font-size: 0.75em;
+	font-size: 0.9em;
 	opacity: 0;
-	-webkit-transition: opacity 0.2s, visibility 0s 0.2s;
-	transition: opacity 0.2s, visibility 0s 0.2s;
+	transition: 0.5s;
 }
 .cs-skin-border.cs-active .cs-options {
 	opacity: 1;
-	-webkit-transition: opacity 0.2s;
-	transition: opacity 0.2s;
+    border-radius: 0px;
+	transition: 0.5s;
 }
 .cs-skin-border ul span {
 	padding: 1em 2em;

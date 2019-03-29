@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="{% static 'style/font.css' %}">
         <link rel="stylesheet" href="{% static 'style/head_bg.css' %}">
         <link rel="stylesheet" href="{% static 'style/main_block.css' %}">
+        <link rel="stylesheet" href="{% static 'style/calculator.css' %}">
     </head>
     <body>
         {% include 'template/head.html' %}
@@ -45,7 +46,7 @@
                      <img src="{% static 'images/KIA_main.png' %}" alt="KIA" id="KIA_main">
                  </div>
              </div>
-             
+
              <!-- По сути костыль который нужен для отступа эллемента... -->
              <div class="indent_3"></div>
              <!-- Кнопки -->
@@ -60,6 +61,7 @@
              <div class="row" >
                  <div class="col"> <img src="{% static 'images/active.png' %}" alt="" style="width: 100%; margin: 30px;"> </div>
              </div>
+             {% include 'template/calculator.html' %}
         </div>
     </body>
 </html>

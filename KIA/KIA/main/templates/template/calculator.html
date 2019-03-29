@@ -1,16 +1,4 @@
-<!DOCTYPE html>
 {% load static %}
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Optima</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="{% static 'style/font.css' %}">
-        <link rel="stylesheet" href="{% static 'style/head_bg.css' %}">
-        <link rel="stylesheet" href="{% static 'style/main_block.css' %}"> -->
-        <link rel="stylesheet" href="{% static 'style/calculator.css' %}">
-    </head>
-    <body style="background: #58090D">
         <div class="container main_calculator">
             <p class="calculator_text_top">Trade-In Калькулятор</p>
             <br>
@@ -18,7 +6,7 @@
             <div class="row">
                 <div class="col-6">
                 <section>
-    				<select class="cs-select cs-skin-border">
+    				<select class="cs-select cs-skin-border left_top">
     					<option value="" disabled selected>Марка автомобиля</option>
     					<option value="">RIO</option>
     					<option value="">Optima</option>
@@ -29,8 +17,8 @@
                 </div>
                 <div class="col-6">
                 <section>
-    				<select class="cs-select cs-skin-border">
-    					<option value="" disabled selected>Марка автомобиля</option>
+    				<select class="cs-select cs-skin-border right_top">
+    					<option value="" disabled selected>Модель автомобиля</option>
     					<option value="">RIO</option>
     					<option value="">Optima</option>
     					<option value="">Picanto</option>
@@ -39,35 +27,36 @@
     			</section>
                 </div>
             </div>
-            <br>
             <br>
             <div class="row">
                 <div class="col-6">
                 <section>
-    				<select class="cs-select cs-skin-border">
-    					<option value="" disabled selected>Марка автомобиля</option>
-    					<option value="">RIO</option>
-    					<option value="">Optima</option>
-    					<option value="">Picanto</option>
-    					<option value="">Soul</option>
+    				<select class="cs-select cs-skin-border left_bot">
+    					<option value="" disabled selected>Год</option>
+    					<option value="">2018</option>
+    					<option value="">2017</option>
+    					<option value="">2016</option>
+    					<option value="">2015</option>
     				</select>
     			</section>
                 </div>
                 <div class="col-6">
                 <section>
     				<select class="cs-select cs-skin-border">
-    					<option value="" disabled selected>Марка автомобиля</option>
-    					<option value="">RIO</option>
-    					<option value="">Optima</option>
-    					<option value="">Picanto</option>
-    					<option value="">Soul</option>
+    					<option value="" disabled selected>Пробег</option>
+    					<option value="без пробега">Без пробега</option>
+    					<option value="">100 км</option>
+    					<option value="">500 км</option>
+    					<option value="">1000 км</option>
+    					<option value="">5000 км</option>
     				</select>
     			</section>
                 </div>
             </div>
             <br>
-
-            <a href="#" class="button">Оценить</a>
+            <div class="parent">
+                <a href="#" class="button">Оценить</a>
+            </div>
         </div>
         <script src="{% static 'js/calculator.js' %}"></script>
         <script>
@@ -77,5 +66,3 @@
                 } );
             })();
         </script>
-    </body>
-</html>
