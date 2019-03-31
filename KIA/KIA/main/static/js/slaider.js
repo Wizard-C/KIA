@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", function() {
         right = document.querySelector(".slider__right"),
         container = document.querySelector(".slider__container"),
         timer;
-    right.addEventListener("click", function() {
+    left.addEventListener("click", function() {
         window.clearTimeout(timer);
         var last = container.querySelector(".slider__item:last-child");
         var first = container.querySelector(".slider__item:first-child");
@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", function() {
             container.classList.remove("left")
         },30)
     });
-    left.addEventListener("click", function() {
+    right.addEventListener("click", function() {
         window.clearTimeout(timer);
         var first = container.querySelector(".slider__item:first-child");
         container.classList.remove("animate");

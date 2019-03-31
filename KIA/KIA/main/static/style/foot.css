@@ -1,0 +1,12 @@
+.bot {
+    position: static;
+    margin-top: 100px;
+    width: 100%;
+    height: 70px;   /* Высота блока "footer" */
+}
+.bot_text{
+    position: relative;
+    text-align: center;
+    display: inline;
+    /* margin: 40px; */
+}

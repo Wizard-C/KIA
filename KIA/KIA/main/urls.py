@@ -15,5 +15,6 @@ urlpatterns = [
     path('head/', views.head, name='head'),
     path('foot/', views.foot, name='foot'),
     path('calculator/', views.calculator, name='calculator'),
+    path('slider/', views.slider, name='slider'),
     path('', views.demo, name='dem'),
 ]

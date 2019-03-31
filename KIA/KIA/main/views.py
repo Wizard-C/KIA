@@ -12,3 +12,6 @@ def demo(request):
 
 def calculator(request):
     return render(request, 'template/calculator.html')
+
+def slider(request):
+    return render(request, 'template/slider.html')

@@ -1,0 +1,85 @@
+{% load static %}
+        <div class="slider">
+            <!-- тени -->
+            <div class="shadow_slider_right"></div>
+            <div class="shadow_slider_left"></div>
+            <!-- кнопочки -->
+            <div class="slider__arrow slider__left"></div>
+            <div class="slider__arrow slider__right"></div>
+            <div class="slider__container">
+                <!-- Костыль из-за которого нужно многократно дублировать блоки слайдера в хтмл  -->
+                <div class="slider__item">
+                        <img class="img car" src="{% static 'images/slaider/ceed.png' %}">
+                        <p class="car_name">Новый CEED JD PE Comfort 1,6L GAS MT</p>
+                        <p class="remainder">Осталось в продаже:</p>
+                        <p class="remainder_b">5 автомобиля</p>
+                        <div class="discount">Выгода: 39 000 руб.</div>
+                        <div class="img_slider_div">
+                            <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
+                            <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
+                            <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                        </div>
+                </div>
+                <div class="slider__item">
+                    <img class="img car" src="{% static 'images/slaider/stinger.png' %}">
+                    <p class="car_name">KIA <br> Stinger</p>
+                    <p class="remainder">Осталось в продаже:</p>
+                    <p class="remainder_b">4 автомобиля</p>
+                    <div class="discount">Выгода: 56 000 руб.</div>
+                    <div class="img_slider_div">
+                        <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
+                        <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
+                        <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <img class="img car" src="{% static 'images/slaider/sorento.png' %}">
+                    <p class="car_name">SORENTO XM Comfort 2,4L GAS AT</p>
+                    <p class="remainder">Осталось в продаже:</p>
+                    <p class="remainder_b">6 автомобиля</p>
+                    <div class="discount">Выгода: 69 000 руб.</div>
+                    <div class="img_slider_div">
+                        <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
+                        <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
+                        <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                    </div>
+                </div>
+                <!-- Конец экземпляров. Дальше дублирование -->
+                <div class="slider__item">
+                        <img class="img car" src="{% static 'images/slaider/ceed.png' %}">
+                        <p class="car_name">Новый CEED JD PE Comfort 1,6L GAS MT</p>
+                        <p class="remainder">Осталось в продаже:</p>
+                        <p class="remainder_b">5 автомобиля</p>
+                        <div class="discount">Выгода: 39 000 руб.</div>
+                        <div class="img_slider_div">
+                            <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
+                            <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
+                            <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                        </div>
+                </div>
+                <div class="slider__item">
+                    <img class="img car" src="{% static 'images/slaider/stinger.png' %}">
+                    <p class="car_name">KIA <br> Stinger</p>
+                    <p class="remainder">Осталось в продаже:</p>
+                    <p class="remainder_b">4 автомобиля</p>
+                    <div class="discount">Выгода: 56 000 руб.</div>
+                    <div class="img_slider_div">
+                        <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
+                        <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
+                        <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <img class="img car" src="{% static 'images/slaider/sorento.png' %}">
+                    <p class="car_name">SORENTO XM Comfort 2,4L GAS AT</p>
+                    <p class="remainder">Осталось в продаже:</p>
+                    <p class="remainder_b">6 автомобиля</p>
+                    <div class="discount">Выгода: 69 000 руб.</div>
+                    <div class="img_slider_div">
+                        <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
+                        <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
+                        <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
