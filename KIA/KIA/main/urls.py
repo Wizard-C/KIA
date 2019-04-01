@@ -10,6 +10,8 @@ urlpatterns = [
     # path('equipment/', views.equipment, name='equipment'),
     # path('contacts/', views.contacts, name='contacts'),
     # path('compani/', views.compani, name='compani'),
+    path('inl/', views.inl, name='inl'),
+
 
     #Шаблоны
     path('head/', views.head, name='head'),

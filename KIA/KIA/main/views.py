@@ -15,3 +15,6 @@ def calculator(request):
 
 def slider(request):
     return render(request, 'template/slider.html')
+
+def inl(request):
+    return render(request, 'main/inl.html')

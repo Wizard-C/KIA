@@ -5,6 +5,9 @@
     height: 70px;   /* Высота блока "footer" */
 }
 .bot_text{
+    font-family: "KiaM";
+    margin-left: 4%;
+    margin-right: 4%;
     position: relative;
     text-align: center;
     display: inline;

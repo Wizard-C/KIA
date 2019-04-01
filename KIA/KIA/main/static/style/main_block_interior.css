@@ -1,15 +1,32 @@
-/* Костыли для отступов */
 a{text-decoration: none;}
 a:hover { text-decoration: none; color: white}
+/* Костыли для отступов */
 .indent_1 {
-    height: 100px;
+    height: 800px;
 }
-.indent_2 {
-    height: 50px;
+.main_car_1{
+    position: absolute;
+    width: 200%;
+    height: auto;
+    float: left;
 }
-.indent_3 {
-    height: 90px;
+.text_main{
+    align-items: center;
 }
+.main_text{
+    float: left;
+}
+.main{
+    position: absolute;
+    left: 20%;
+    top: 100px;
+}
+.text_catalog{
+    text-align: center;
+    font-size: 26px;
+}
+
+/*
 
 .main_block {
     position: absolute;
@@ -92,7 +109,7 @@ a:hover { text-decoration: none; color: white}
     font-family: "Tahoma";
     line-height: 1.2;
     text-align: center;
-}
+} */
 .button {
     padding: 12px;
     height: 60px;

@@ -1,0 +1,44 @@
+{% load static %}
+        <div class="slider">
+            <!-- тени -->
+            <div class="shadow_slider_right"></div>
+            <div class="shadow_slider_left"></div>
+            <!-- кнопочки -->
+            <div class="slider__arrow slider__left"></div>
+            <div class="slider__arrow slider__right"></div>
+            <div class="slider__container">
+                <!-- Костыль из-за которого нужно многократно дублировать блоки слайдера в хтмл  -->
+                <div class="slider__item">
+                        <img class="img car" src="{% static 'images/car1.png' %}">
+                        <p class="text_top">Цвет</p>
+                        <p class="text_bot">Deluxe White</p>
+                        <p class="text_top">Двигатель</p>
+                        <p class="text_bot">1.6L GAS MT</p>
+                        <p class="text_top">Год выпуска</p>
+                        <p class="text_bot">2017</p>
+                        <p class="text_top">Комплектация</p>
+                        <p class="text_bot">Хэтчбек</p>
+                        <p class="text_top">Адрес салона</p>
+                        <p class="text_bot">г. Пермь, шоссе Комонавтов, д. 198</p>
+                        <div class="img_slider_div">
+                            <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
+                            <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
+                            <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                        </div>
+                </div>
+                <div class="slider__item">
+                    <!-- Нужно сохранить картинку car2 в нормальном формате для исправления бага -->
+                    <img class="img car" src="{% static 'images/car2.png' %}">
+                    <p class="car_name">Stinger</p>
+                    <p class="remainder">Осталось в продаже:</p>
+                    <p class="remainder_b">4 автомобиля</p>
+                    <div class="discount">Выгода: <b> 56 000 </b>руб.</div>
+                    <div class="img_slider_div">
+                        <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
+                        <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
+                        <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                    </div>
+                </div>
+                <!-- Конец экземпляров. Дальше дублирование -->
+            </div>
+        </div>
