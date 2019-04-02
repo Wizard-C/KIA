@@ -16,5 +16,21 @@ def calculator(request):
 def slider(request):
     return render(request, 'template/slider.html')
 
+def test(request):
+    return render(request, 'template/test.html')
+
+# Страницы сайта
+def default(request):
+    return render(request, 'main/default.html')
+
+def optima(request):
+    return render(request, 'main/optima.html')
+
+def rio(request):
+    return render(request, 'main/rio.html')
+
+def sportage(request):
+    return render(request, 'main/sportage.html')
+
 def inl(request):
     return render(request, 'main/inl.html')

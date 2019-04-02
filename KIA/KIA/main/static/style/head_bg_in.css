@@ -1,9 +1,6 @@
 body {
-    border-color: #58090D;
     background:
-    url(../images/bg_top.png) 0 0 no-repeat,
-    url(../images/bg_bot.png) -100% 100% no-repeat,
-    #58090D; /* вставка картиночки */
+    url(../images/bg_in.png) 0 0 no-repeat, #6F1518;
     background-size: 100%;
     height: 100%;
     color: white;

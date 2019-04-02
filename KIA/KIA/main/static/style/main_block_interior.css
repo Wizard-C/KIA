@@ -2,24 +2,48 @@ a{text-decoration: none;}
 a:hover { text-decoration: none; color: white}
 /* Костыли для отступов */
 .indent_1 {
-    height: 800px;
-}
-.main_car_1{
-    position: absolute;
-    width: 200%;
-    height: auto;
-    float: left;
-}
-.text_main{
-    align-items: center;
-}
-.main_text{
-    float: left;
+    height: 600px;
 }
 .main{
     position: absolute;
     left: 20%;
+    right: 20%;
     top: 100px;
+}
+.main_car_block{
+    width: 55%;
+    display: inline-block;
+}
+.main_text_block{
+    width: 40%;
+    display: inline-block;
+    float: right;
+}
+.main_car{
+    width: 100%;
+}
+.text_main{
+    font-size: 35px;
+    font-family: "KIAM";
+    line-height: 1.2;
+    text-align: center;
+}
+.text_left {
+    font-size: 26px;
+    font-family: "KIAM";
+    line-height: 2;
+    color: white;
+    float: left;
+    width: 50%;
+}
+.text_right {
+    font-size: 26px;
+    font-family: "Tahoma";
+    line-height: 2;
+    color: white;
+    float: right;
+    width: 50%;
+    text-align: right;
 }
 .text_catalog{
     text-align: center;

@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Optima</title>
+        <title>В наличии!</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'style/font.css' %}">
         <link rel="stylesheet" href="{% static 'style/head_bg.css' %}">
@@ -20,37 +20,21 @@
         <div class="container main">
             <!-- slaider -->
             <div class="ball_slaider_block">
-                <a href="http://127.0.0.1:8000/default/"><div class="ball_slaider"></div></a>
+                <a href="http://127.0.0.1:8000/default/"><div class="ball_slaider active_slide"></div></a>
                 <a href="http://127.0.0.1:8000/rio/"><div class="ball_slaider"></div></a>
                 <a href="http://127.0.0.1:8000/sportage/"><div class="ball_slaider"></div></a>
-                <a href="http://127.0.0.1:8000/optima/"><div class="ball_slaider active_slide"></div></a>
+                <a href="http://127.0.0.1:8000/optima/"><div class="ball_slaider"></div></a>
             </div>
             <div class="row">
-                <div class="col"> <h1 id="global_name">OPTIMA</h1></div>
+                <div class="col"> <h1 id="global_name">АВТОМОБИЛИ <br>В НАЛИЧИИ</h1></div>
             </div>
             <!-- По сути костыль который нужен для отступа эллемента... -->
             <div class="indent_2"></div>
-            <div class="row">
-                <div class="col">
-                    <div class="border_block_left">
-                        <img class="bildbord" src="{% static 'images/bilborder.png' %}" alt="">
-                        <p class="text_title_min">Выгода до</p>
-                        <p class="text_title_max">120 000 руб</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="border_block_right">
-                        <img class="bildbord" src="{% static 'images/bilborder.png' %}" alt="">
-                        <p class="text_title_min">Осталось в продаже</p>
-                        <p class="text_title_max">8 автомобилей</p>
-                    </div>
-                </div>
-             </div>
 
              <!-- img -->
              <div class="row">
                  <div class="col">
-                     <img src="{% static 'images/KIA_main.png' %}" alt="KIA" id="KIA_main">
+                     <img src="{% static 'images/default.png' %}" alt="KIA" id="KIA_main">
                  </div>
              </div>
 

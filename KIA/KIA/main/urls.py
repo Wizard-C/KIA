@@ -11,6 +11,10 @@ urlpatterns = [
     # path('contacts/', views.contacts, name='contacts'),
     # path('compani/', views.compani, name='compani'),
     path('inl/', views.inl, name='inl'),
+    path('optima/', views.optima, name='optima'),
+    path('rio/', views.rio, name='rio'),
+    path('sportage/', views.sportage, name='sportage'),
+    path('default/', views.default, name='default'),
 
 
     #Шаблоны
@@ -18,5 +22,6 @@ urlpatterns = [
     path('foot/', views.foot, name='foot'),
     path('calculator/', views.calculator, name='calculator'),
     path('slider/', views.slider, name='slider'),
+    path('test/', views.test, name='test'),
     path('', views.demo, name='dem'),
 ]
