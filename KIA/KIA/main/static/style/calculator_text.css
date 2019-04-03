@@ -1,4 +1,48 @@
 /*  border: 2px solid black; */
+*:focus {outline: none;}
+div.left_top{
+    position: absolute;
+    z-index: 110;
+    right: 0;
+}
+div.left_bot{
+    position: absolute;
+    z-index: 100;
+    right: 0;
+}
+div.right_top{
+    z-index: 110;
+}
+.block_calculator_input {
+    width: 60%;
+}
+.input_name_calculator {
+    font-size: 19px;
+    font-family: "KiaM";
+}
+.input_calculator {
+    width: 100%;
+    color: #F3E7E9;
+    height: 35px;
+    background: #890F21;
+    padding:5px 8px;
+    border:1px solid #555;
+    border-radius: 4px;
+    transition: .3s;
+}
+.input_calculator:hover {background: white; height: 45px; border-radius: 4px;}
+.input_calculator:focus {
+    border-radius: 4px;
+    background: white;
+    border:3px solid #D6F3EF;
+    box-shadow: 0 0 3px #aaa;
+    width: 100%;
+    color: #F3E7E9;
+    height: 45px;
+    background: #890F21;
+    padding:5px 8px;
+}
+
 .main_calculator {
     background: #BE1E34;
     border-radius: 12px;
@@ -65,23 +109,10 @@ div.cs-select {
 	-ms-user-select: none;
 	user-select: none;
 }
-div.left_top{
-    z-index: 110;
-    position: absolute;
-    right: 0;
-}
-div.left_bot{
-    z-index: 100;
-    position: absolute;
-    right: 0;
-}
-div.right_top{
-    z-index: 110;
-}
+
 div.cs-select:focus {
 	outline: none; /* For better accessibility add a style for this in your skin */
 }
-
 .cs-select select {
 	display: none;
 }

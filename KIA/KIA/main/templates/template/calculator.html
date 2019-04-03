@@ -1,12 +1,71 @@
 {% load static %}
         <div class="container main_calculator">
             <br>
-            <p class="calculator_text_top">Trade-In Калькулятор <br><span style="color: #871627; ">(в дальнейшем поля будут как текстовый ввод)</span></p>
+            <p class="calculator_text_top">Trade-In Калькулятор</p>
             <br>
             <p class="calculator_text_mid">Получи выгоду от Trade-In!<br> Оцени свой старый автомобиль прямо сейчас!
             <br><br>
-        </p>
+            </p>
+
+            <!-- cs-select cs-skin-border  -->
+            <form class="contact_form" action="" method="post" name="contact_form">
             <div class="row">
+                <div class="col">
+                    <div class="block_calculator_input left_top">
+                        <span for="name" class="input_name_calculator">Марка машины</span> <br>
+                        <input type="text" name="name" placeholder="Rio" class="input_calculator"/>
+                    </div>
+                </div>
+                <div class="col-1">
+
+                </div>
+                <div class="col">
+                    <div class="block_calculator_input right_top">
+                        <span for="name" class="input_name_calculator">Модель машины</span> <br>
+                        <input type="text" name="name" placeholder="new 1920" class="input_calculator"/>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <div class="block_calculator_input left_bot">
+                        <span for="name" class="input_name_calculator">Год производства</span> <br>
+                        <input type="text" name="name" placeholder="2010" class="input_calculator"/>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col">
+                    <div class="block_calculator_input right_bot">
+                        <span for="name" class="input_name_calculator">Пробег (в КМ)</span> <br>
+                        <input type="text" name="name" placeholder="2970" class="input_calculator"/>
+                    </div>
+                </div>
+            </div>
+            </form>
+
+            <!-- <div class="row">
+                <form action="handler.php">
+                    <p><strong>Как вас зовут?</strong></p>
+                    <p><input maxlength="25" size="40" value="Вася"></p>
+                </form>
+                <div style="border: 2ps solid black" class="col-6">1
+
+                </div>
+                <div style="border: 2ps solid black" class="col-6">1
+
+                </div>
+                <div style="border: 2ps solid black" class="col-6">1
+
+                </div>
+                <div style="border: 2ps solid black" class="col-6">1
+
+                </div>
+            </div> -->
+
+
+            <!-- Очешуенная выпадающая менюшка выбора -->
+            <!-- <div class="row">
                 <div class="col-6">
                 <section>
     				<select class="cs-select cs-skin-border left_top">
@@ -55,7 +114,7 @@
     				</select>
     			</section>
                 </div>
-            </div>
+            </div> -->
             <br><br>
             <div class="parent">
                 <a href="#" class="button">Оценить</a>

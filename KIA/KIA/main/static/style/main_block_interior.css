@@ -23,13 +23,13 @@ a:hover { text-decoration: none; color: white}
     width: 100%;
 }
 .text_main{
-    font-size: 35px;
+    font-size: 32px;
     font-family: "KIAM";
     line-height: 1.2;
     text-align: center;
 }
 .text_left {
-    font-size: 26px;
+    font-size: 23px;
     font-family: "KIAM";
     line-height: 2;
     color: white;
@@ -136,7 +136,7 @@ a:hover { text-decoration: none; color: white}
 } */
 .button {
     padding: 12px;
-    height: 60px;
+    height: 55px;
     background: #CC2A2F; /* фон кнопки */
     outline: none; /* убирать контур в Mozilla */
     transition: 0.4s;
@@ -151,7 +151,7 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     position: absolute;
     right: 0;
     top:0;
-    margin: 7.5px;
+    margin: 5px;
 }
 .button_text{
   color: #fff; /* цвет текста */
