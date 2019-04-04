@@ -66,7 +66,7 @@ a:hover { text-decoration: none; color: white}
     color: #5A0B0F;
     font-size: 20px;
     font-family: "Tahoma";
-    line-height: 2.8;
+    line-height: 1.4;
     text-align: center;
     z-index: 100;
 }
@@ -102,7 +102,7 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     width: 45px;
     height: 45px;
     position: absolute;
-    right: 0;
+    right: 20px;
     top:0;
     margin: 7.5px;
 }

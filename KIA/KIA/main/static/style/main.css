@@ -62,15 +62,6 @@ body {
     transition: 0.2s;
     border-radius: 6px;
 }
-div.button:hover { background: #6D2642; } /* при наведении курсора мышки */
-div.button:active { background: rgb(152,15,0); } /* при нажатии */
-.button_icon {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: 0;
-    top:0;
-}
 .button_text{
   color: #fff; /* цвет текста */
   font-size: 16px;
@@ -82,6 +73,16 @@ div.button:active { background: rgb(152,15,0); } /* при нажатии */
   padding: .4em 1.5em; /* отступ от текста */
   outline: none; /* убирать контур в Mozilla */
 }
+.button_icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 60px;
+    top:0;
+}
+div.button:hover { background: #6D2642; } /* при наведении курсора мышки */
+div.button:active { background: rgb(152,15,0); } /* при нажатии */
+
 
 .catalog {
     height: 45%;

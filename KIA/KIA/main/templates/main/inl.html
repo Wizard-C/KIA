@@ -14,7 +14,6 @@
     </head>
     <body >
         {% include 'template/head.html' %}
-        <!-- Пример оптимы -->
         <!-- По сути костыль который нужен для отступа эллемента... -->
         <div class="indent_1"></div>
         <div class="main">
@@ -22,10 +21,8 @@
             <div class="main_text_block">
                 <p class="text_main">Новый Ceed JD</p>
                 <p><span class="text_left">В наличии:</span> <span class="text_right"> <b> 5 автомобилей</b> </span> <br></p>
-                <span class="text_left">Выгода:</span> <span class="text_right"> <b>69 000 р</b> </span>  <br>  <br>  <br> 
-                <div class="col button"><a href="Https://google.com" class="button_text">Тест-драйв    <img class="button_icon" src="{% static 'images/test-drive.png' %}" alt="Тест драйв"></a> </div> <br>
-                <div class="col button"><a href="Https://google.com" class="button_text">Подробнее     <img class="button_icon" src="{% static 'images/info.png' %}" alt="Подробнее"></a> </div> <br>
-                <div class="col button"><a href="Https://google.com" class="button_text">Консультация  <img class="button_icon" src="{% static 'images/support.png' %}" alt="Консультация"></a> </div>
+                <span class="text_left">Выгода:</span> <span class="text_right"> <b>69 000 р</b> </span>  <br>  <br>  <br>
+                {% include 'template/button_interior.html' %}
             </div>
         </div>
         <p class="text_catalog">Автомобили в наличии:</p>
