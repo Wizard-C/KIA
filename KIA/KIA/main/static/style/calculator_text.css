@@ -26,7 +26,7 @@ div.right_top{
     height: 35px;
     background: #890F21;
     padding:5px 8px;
-    border:1px solid #555;
+    border:0px solid #555;
     border-radius: 4px;
     transition: .3s;
 }
@@ -61,8 +61,6 @@ div.right_top{
     line-height: 1.7;
     text-align: center;
     color: white
-}
-.option_block{
 }
 /* Кнопка */
 a.button {

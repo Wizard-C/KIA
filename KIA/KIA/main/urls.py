@@ -4,12 +4,7 @@ from . import views
 
 urlpatterns = [
     # Основные страницы
-    # path('', views.home, name='home'),
-    # path('delivery/', views.delivery, name='delivery'),
-    # path('pay/', views.pay, name='pay'),
-    # path('equipment/', views.equipment, name='equipment'),
-    # path('contacts/', views.contacts, name='contacts'),
-    # path('compani/', views.compani, name='compani'),
+    path('', views.default, name='default'),
     path('inl/', views.inl, name='inl'),
     path('optima/', views.optima, name='optima'),
     path('rio/', views.rio, name='rio'),
@@ -23,5 +18,6 @@ urlpatterns = [
     path('calculator/', views.calculator, name='calculator'),
     path('slider/', views.slider, name='slider'),
     path('test/', views.test, name='test'),
-    path('', views.default, name='default'),
+    # path('callback/', views.callback, name='callback'),
+    # path('thank/', views.thank, name='thank'),
 ]

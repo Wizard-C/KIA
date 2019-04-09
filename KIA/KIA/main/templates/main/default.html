@@ -3,14 +3,16 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=600, initial-scale=1">
         <title>В наличии!</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'style/font.css' %}">
         <link rel="stylesheet" href="{% static 'style/head_bg.css' %}">
-        <link rel="stylesheet" href="{% static 'style/main_block.css' %}">
         <link rel="stylesheet" href="{% static 'style/calculator_text.css' %}">
         <link rel="stylesheet" href="{% static 'style/slaider.css' %}">
         <link rel="stylesheet" href="{% static 'style/foot.css' %}">
+        <!-- В этом файле так же адаптив -->
+        <link rel="stylesheet" href="{% static 'style/main_block.css' %}">
     </head>
     <body>
         {% include 'template/head.html' %}
@@ -46,7 +48,7 @@
 
              <!-- line_price -->
              <div class="row" >
-                 <div class="col"> <img src="{% static 'images/active.png' %}" alt="" style="width: 100%; margin: 30px;"> </div>
+                 <div class="col" style="text-align: center"> <img src="{% static 'images/active.png' %}" alt="" class="line_price"> </div>
              </div>
          </div>
          {% include 'template/slaider.html' %}

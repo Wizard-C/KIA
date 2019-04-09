@@ -1,13 +1,15 @@
+.text_margin_bot {
+    margin-left: 35%;
+}
 .bot {
     position: static;
-    margin-top: 100px;
+    margin-top: 70px;
     width: 100%;
     height: 70px;   /* Высота блока "footer" */
 }
 .bot_text{
     font-family: "KiaM";
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left: 80px;
     position: relative;
     text-align: center;
     display: inline;

@@ -1,4 +1,25 @@
 from django.shortcuts import render
+# callback form
+
+# from .forms import NameForm
+#
+# def get_name ( request ):
+#     # create a form instance and populate it with data from the request:
+#     form = Call_back ( request.POST )
+#     # check whether it's valid:
+#     if form.is_valid ():
+#         # process the data in form.cleaned_data as required
+#         # ...
+#         # redirect to a new URL:
+#         return HttpResponseRedirect ( '/thanks/' )
+#     return render ( request , 'name.html' , { 'form' : form })
+#
+# def callback(request):
+#     return render(request, 'template/callback.html')
+#
+# def thank(request):
+#     return render(request, 'template/thank.html')
+
 
 # Шаблоны
 def head(request):
@@ -18,6 +39,7 @@ def slider(request):
 
 def test(request):
     return render(request, 'template/test.html')
+
 
 # Страницы сайта
 def default(request):
