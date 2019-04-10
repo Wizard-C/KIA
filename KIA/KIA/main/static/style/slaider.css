@@ -56,6 +56,12 @@
     z-index: 0;
     opacity: 0.3;
 }
+.slider_mobile_left{
+    display: none;
+}
+.slider_mobile_right{
+    display: none;
+}
 /* Выделение блока */
 .slider__item:hover {
     transition:  .4s;

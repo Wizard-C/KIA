@@ -21,7 +21,7 @@
 .option_block{
 }
 /* Кнопка */
-a.button {
+a.button_calculator {
     width: 350px;
     height: 50px;
     font-weight: 700;
@@ -36,8 +36,8 @@ a.button {
     text-align: center;
     font-family: "KiaM"
 }
-a.button:hover { background: #581116; }
-a.button:active {
+a.button_calculator:hover { background: #581116; }
+a.button_calculator:active {
     background: #F9F9EB;
     box-shadow: 0 3px #581116 inset;
 }

@@ -1,5 +1,5 @@
 {% load static %}
-        <div class="container main_calculator">
+        <div class="container main_calculator pc">
             <br>
             <p class="calculator_text_top">Trade-In Калькулятор</p>
             <br>
@@ -44,82 +44,57 @@
             </div>
             </form>
 
-            <!-- <div class="row">
-                <form action="handler.php">
-                    <p><strong>Как вас зовут?</strong></p>
-                    <p><input maxlength="25" size="40" value="Вася"></p>
-                </form>
-                <div style="border: 2ps solid black" class="col-6">1
-
-                </div>
-                <div style="border: 2ps solid black" class="col-6">1
-
-                </div>
-                <div style="border: 2ps solid black" class="col-6">1
-
-                </div>
-                <div style="border: 2ps solid black" class="col-6">1
-
-                </div>
-            </div> -->
-
-
-            <!-- Очешуенная выпадающая менюшка выбора -->
-            <!-- <div class="row">
-                <div class="col-6">
-                <section>
-    				<select class="cs-select cs-skin-border left_top">
-    					<option value="" disabled selected>Марка автомобиля</option>
-    					<option value="">RIO</option>
-    					<option value="">Optima</option>
-    					<option value="">Picanto</option>
-    					<option value="">Soul</option>
-    				</select>
-    			</section>
-                </div>
-                <div class="col-6">
-                <section>
-    				<select class="cs-select cs-skin-border right_top">
-    					<option value="" disabled selected>Модель автомобиля</option>
-    					<option value="">RIO</option>
-    					<option value="">Optima</option>
-    					<option value="">Picanto</option>
-    					<option value="">Soul</option>
-    				</select>
-    			</section>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-6">
-                <section>
-    				<select class="cs-select cs-skin-border left_bot">
-    					<option value="" disabled selected>Год</option>
-    					<option value="">2018</option>
-    					<option value="">2017</option>
-    					<option value="">2016</option>
-    					<option value="">2015</option>
-    				</select>
-    			</section>
-                </div>
-                <div class="col-6">
-                <section>
-    				<select class="cs-select cs-skin-border">
-    					<option value="" disabled selected>Пробег</option>
-    					<option value="без пробега">Без пробега</option>
-    					<option value="">100 км</option>
-    					<option value="">500 км</option>
-    					<option value="">1000 км</option>
-    					<option value="">5000 км</option>
-    				</select>
-    			</section>
-                </div>
-            </div> -->
             <br><br>
             <div class="parent">
-                <a href="#" class="button">Оценить</a>
+                <a href="#" class="button_calculator">Оценить</a>
             </div>
         </div>
+
+        <!-- Адаптив под мобилки -->
+        <div class="container main_calculator mobile">
+            <br>
+            <p class="calculator_text_top">Trade-In Калькулятор</p>
+            <br>
+            <p class="calculator_text_mid">Получи выгоду от Trade-In!<br> Оцени свой старый автомобиль прямо сейчас!
+            <br><br>
+            </p>
+
+            <!-- cs-select cs-skin-border  -->
+            <form class="contact_form" action="" method="post" name="contact_form">
+            <div class="row">
+                <div class="col-12">
+                    <div class="block_calculator_input">
+                        <span for="name" class="input_name_calculator">Марка машины</span> <br>
+                        <input type="text" name="name" placeholder="Rio" class="input_calculator"/>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="block_calculator_input">
+                        <span for="name" class="input_name_calculator">Модель машины</span> <br>
+                        <input type="text" name="name" placeholder="new 1920" class="input_calculator"/>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="block_calculator_input">
+                        <span for="name" class="input_name_calculator">Год производства</span> <br>
+                        <input type="text" name="name" placeholder="2010" class="input_calculator"/>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="block_calculator_input">
+                        <span for="name" class="input_name_calculator">Пробег (в КМ)</span> <br>
+                        <input type="text" name="name" placeholder="2970" class="input_calculator"/>
+                    </div>
+                </div>
+            </div>
+            </form>
+
+            <br><br>
+            <div class="parent">
+                <a href="#" class="button_calculator">Оценить</a>
+            </div>
+        </div>
+
         <script src="{% static 'js/calculator.js' %}"></script>
         <script>
             (function() {
@@ -128,3 +103,78 @@
                 } );
             })();
         </script>
+
+
+
+
+                    <!-- <div class="row">
+                        <form action="handler.php">
+                            <p><strong>Как вас зовут?</strong></p>
+                            <p><input maxlength="25" size="40" value="Вася"></p>
+                        </form>
+                        <div style="border: 2ps solid black" class="col-6">1
+
+                        </div>
+                        <div style="border: 2ps solid black" class="col-6">1
+
+                        </div>
+                        <div style="border: 2ps solid black" class="col-6">1
+
+                        </div>
+                        <div style="border: 2ps solid black" class="col-6">1
+
+                        </div>
+                    </div> -->
+
+
+                    <!-- Очешуенная выпадающая менюшка выбора -->
+                    <!-- <div class="row">
+                        <div class="col-6">
+                        <section>
+            				<select class="cs-select cs-skin-border left_top">
+            					<option value="" disabled selected>Марка автомобиля</option>
+            					<option value="">RIO</option>
+            					<option value="">Optima</option>
+            					<option value="">Picanto</option>
+            					<option value="">Soul</option>
+            				</select>
+            			</section>
+                        </div>
+                        <div class="col-6">
+                        <section>
+            				<select class="cs-select cs-skin-border right_top">
+            					<option value="" disabled selected>Модель автомобиля</option>
+            					<option value="">RIO</option>
+            					<option value="">Optima</option>
+            					<option value="">Picanto</option>
+            					<option value="">Soul</option>
+            				</select>
+            			</section>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-6">
+                        <section>
+            				<select class="cs-select cs-skin-border left_bot">
+            					<option value="" disabled selected>Год</option>
+            					<option value="">2018</option>
+            					<option value="">2017</option>
+            					<option value="">2016</option>
+            					<option value="">2015</option>
+            				</select>
+            			</section>
+                        </div>
+                        <div class="col-6">
+                        <section>
+            				<select class="cs-select cs-skin-border">
+            					<option value="" disabled selected>Пробег</option>
+            					<option value="без пробега">Без пробега</option>
+            					<option value="">100 км</option>
+            					<option value="">500 км</option>
+            					<option value="">1000 км</option>
+            					<option value="">5000 км</option>
+            				</select>
+            			</section>
+                        </div>
+                    </div> -->
