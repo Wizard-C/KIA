@@ -88,6 +88,7 @@ a:hover { text-decoration: none; color: white}
     margin-left: -5%;
     width:110%;
 }
+/* callback and button */
 .button {
     padding: 15px;
     height: 60px;
@@ -117,24 +118,165 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
   padding: .6em 1.2em; /* отступ от текста */
   outline: none; /* убирать контур в Mozilla */
 }
+
+/* Нужно для затемнения фона */
+.js_overlay{
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: -200%;
+    background: black;
+    opacity: 0.7;
+    z-index: 4000;
+    display: none;
+}
+.callback_form_test{
+    left: 25%;
+    top: 25%;
+    border: 2px solid white;
+    position: absolute;
+    background: #BE1E34;
+    border-radius: 12px;
+    height: auto;
+    width: 50%;
+    z-index: 5000;
+    display: none;
+    text-align: center;
+}
+.callback_form_more{
+    left: 25%;
+    top: 25%;
+    border: 2px solid white;
+    position: absolute;
+    background: #BE1E34;
+    border-radius: 12px;
+    height: auto;
+    width: 50%;
+    z-index: 5000;
+    display: none;
+    text-align: center;
+}
+.callback_form_consul{
+    left: 25%;
+    top: 25%;
+    border: 2px solid white;
+    position: absolute;
+    background: #BE1E34;
+    border-radius: 12px;
+    height: auto;
+    width: 50%;
+    z-index: 5000;
+    display: none;
+    text-align: center;
+}
+.callback_top_text{
+    font-size: 23px;
+    font-family: "KiaM";
+    line-height: 3.2;
+    text-align: center;
+    color: white
+}
+.input_callback{
+    width: 35%;
+    height: 35px;
+    color: white;
+    border:0px solid #555;
+    border-radius: 4px;
+    background: #890F21;
+    padding:5px 8px;
+    margin: 6px;
+    transition: .3s;
+}
+.input_callback:hover{
+    border: 2px solid white;
+    background: #D3233D;
+    height: 45px;
+    border-radius: 4px;
+}
+.callback_button_in_form{
+    border:0px solid;
+    width: 25%;
+    height: 45px;
+    margin: 20px;
+    font-weight: 700;
+    color: #D3474A;
+    border-radius: 6px;
+    background: white;
+    transition: 0.3s;
+    text-align: center;
+    font-family: "KiaM"
+}
+.callback_button_in_form:hover{
+    border: 2px solid white;
+    background: #D3233D;
+    color: white;
+}
+.input_callback::placeholder {color: #D9D9D9;}
+.checkbox:checked{
+    background: red;
+    border: 3px solid black;
+}
+.personal_text{
+    font-size: 18px;
+    line-height: 5.2;
+}
+.personal_text_link{
+    color: white;
+    text-decoration: underline;
+}
+/* Крестик для закрытия окна */
+.close_window {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 23px;
+	height: 23px;
+	cursor: pointer;
+}
+
+.close_window:before {
+	content: '';
+	background-color: white;
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	left: -4px;
+	transform: rotate(-45deg);
+}
+
+.close_window:after {
+	content: '';
+	background-color: white;
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	transform: rotate(45deg);
+	left: -4px;
+}
+
+
 .margin_button_left{margin-left: 5%;}
 .line_price{
     width: 100%; margin: 30px;
 }
 
 @media  (max-width: 576px) {
+    /* Для избежания багов нужно фон большего размера в ширину. */
     .pc{display: none;}
     /* head_bg */
-    body{background: url(../images/bg_mobile.png) 0 -200px no-repeat, #58090D; }
-    .KIA_icon   {height: 82px;}
+    body{background: url(../images/bg_mobile.png) 0 -280px no-repeat, #58090D; position: absolute; width: 100%;}
+    .KIA_icon   {height: 82px; left: 20px;}
     .block_text_head{left: 50%; width: 50%;}
     .head_block {height: 90px; position: absolute;}
     .head_text  {font-size: 16px; float: none; margin-top: 0; height: 30px;}
     /* main_block */
     .indent_1 {height: 110px;}
-    .indent_2 {height: 5px;}
+    .indent_2 {height: 35px;}
     .indent_3 {height: 15px;}
-    #global_name{font-size: 40px;}
+    #global_name{font-size: 47px;}
     #KIA_main{width: 100%; margin-left: 0;}
     .border_block_left{position: static; height: 60%; width: 100%; margin-top: 90px;}
     .border_block_right{position: static; height: 90%; width: 100%; margin-top: -200px;}
@@ -154,6 +296,10 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .button_text{font-size: 23px;}
     .button_icon{height: 40px; width: 40px; margin: 15px;}
     .button{margin: 10px; padding: 5px; height: 50px;}
+    /* callback */
+    .callback_form_test{width: 90%; left: 5%;}
+    .callback_form_more{width: 90%; left: 5%;}
+    .callback_form_consul{width: 90%; left: 5%;}
     /* slaider */
     .slider {height: 630px; }
     .slider__arrow {width: 10%}
@@ -174,22 +320,21 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .input_calculator {height: 45px; padding:6px 18px; border-radius: 4px;}
     .button{font-size: 23px;}
     /* bot */
-    .text_margin_bot{text-align: center; margin-left: 0;}
     .bot_text{height: 60px; margin:20px; margin-left: 0px;font-size: 20px; color: #FBD6D7;}
 }
-@media (min-width: 568px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 768px) {
     .pc{display: none;}
     /* head_bg */
-    body{background: url(../images/bg_mobile.png) 0 -200px no-repeat, #58090D; }
-    .KIA_icon   {height: 82px;}
+    body{background: url(../images/bg_mobile.png) 0 -280px no-repeat, #58090D; }
+    .KIA_icon   {height: 82px; left: 20px;}
     .block_text_head{left: 50%; width: 50%;}
     .head_block {height: 90px; position: absolute;}
     .head_text  {font-size: 16px; float: none; margin-top: 0; height: 30px;}
     /* main_block */
     .indent_1 {height: 110px;}
-    .indent_2 {height: 5px;}
+    .indent_2 {height: 15px;}
     .indent_3 {height: 15px;}
-    #global_name{font-size: 40px;}
+    #global_name{font-size: 47px;}
     #KIA_main{width: 100%; margin-left: 0;}
     .border_block_left{position: static; height: 60%; width: 100%; margin-top: 90px;}
     .border_block_right{position: static; height: 90%; width: 100%; margin-top: -200px;}
@@ -209,8 +354,10 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .button_text{font-size: 23px;}
     .button_icon{height: 40px; width: 40px; margin: 15px;}
     .button{margin: 10px; padding: 5px; height: 50px;}
+    /* callback */
+    .callback_form_test{width: 90%; left: 5%;}
     /* slaider */
-    .slider {height: 630px; }
+    .slider {height: 720px; }
     .slider__arrow {width: 10%}
     .slider__item {margin: 10%; width: 30%;}
     .slider__container.left{left: -100%}
@@ -229,7 +376,6 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .input_calculator {height: 45px; padding:6px 18px; border-radius: 4px;}
     .button{font-size: 23px;}
     /* bot */
-    .text_margin_bot{text-align: center; margin-left: 0;}
     .bot_text{height: 60px; margin:20px; margin-left: 0px;font-size: 20px; color: #FBD6D7;}
 }
 @media (min-width: 768px) and (max-width: 990px) {
@@ -274,7 +420,6 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .input_calculator {height: 45px; padding:6px 18px; border-radius: 9px;}
     .button{font-size: 22px;}
     /* bot */
-    .text_margin_bot{margin-left: 28%}
     .bot_text{margin-left: 20px;font-size: 20px;}
 }
 @media (min-width: 990px) and (max-width: 1200px){
@@ -317,19 +462,16 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .input_calculator {height: 45px; padding:6px 18px; border-radius: 9px;}
     .button{font-size: 23px;}
     /* bot */
-    .text_margin_bot{margin-left: 30%}
     .bot_text{margin-left: 20px;font-size: 18px;}
 }
 @media (min-width: 1200px) and (max-width: 1500px){
     .mobile{display: none}
     .border_block_right{top: -460px}
     .border_block_left{top: -420px}
-    .text_margin_bot{margin-left: 28%}
 }
-@media (min-width: 1500px) and (max-width: 1920px){.mobile{display: none}.indent_2 {height: 140px; } .text_margin_bot{margin-left: 32%}}
-@media (min-width: 1920px) and (max-width: 2560px){.mobile{display: none}.indent_2 {height: 140px; } .slider {height: 685px; }}
+@media (min-width: 1500px) and (max-width: 2560px){.mobile{display: none} .indent_2 {height: 140px; }
 @media (min-width: 2560px) and (max-width: 8000px){
-    .mobile{display: none}
+    .mobile{display: none;}
     /* head_bg */
     .KIA_icon   {height: 90px;}
     .head_block {height: 100px;}

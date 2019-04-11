@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>В наличии!</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'style/font.css' %}">
-        <link rel="stylesheet" href="{% static 'style/head_bg.css' %}">
-        <link rel="stylesheet" href="{% static 'style/calculator_text.css' %}">
-        <link rel="stylesheet" href="{% static 'style/slaider.css' %}">
-        <link rel="stylesheet" href="{% static 'style/foot.css' %}">
-        <!-- В этом файле так же адаптив -->
-        <link rel="stylesheet" href="{% static 'style/main_block.css' %}">
-    </head>
-    <body>
-        {% include 'template/head.html' %}
-        <!-- Пример оптимы -->
-        <!-- По сути костыль который нужен для отступа эллемента... -->
-        <div class="indent_1"></div>
-        <div class="container main">
-            <!-- slaider -->
-            <div class="ball_slaider_block">
+ <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Optima</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="{% static 'style/font.css' %}">
+     <link rel="stylesheet" href="{% static 'style/head_bg.css' %}">
+     <link rel="stylesheet" href="{% static 'style/slaider.css' %}">
+     <link rel="stylesheet" href="{% static 'style/calculator_text.css' %}">
+     <link rel="stylesheet" href="{% static 'style/foot.css' %}">
+     <!-- В этом файле так же адаптив -->
+     <link rel="stylesheet" href="{% static 'style/main_block.css' %}">
+ </head>
+ <body>
+     <body>
+         <div class="js_overlay"></div>
+         {% include 'template/head.html' %}
+         <!-- Пример оптимы -->
+         <!-- По сути костыль который нужен для отступа эллемента... -->
+         <div class="indent_1"></div>
+         <div class="container main">
+             <!-- slaider -->
+             <div class="ball_slaider_block">
                 <a href="../"><div class="ball_slaider active_slide"></div></a>
                 <a href="../rio/"><div class="ball_slaider"></div></a>
                 <a href="../sportage/"><div class="ball_slaider"></div></a>
@@ -34,26 +36,28 @@
             <div class="indent_2"></div>
 
              <!-- img -->
-             <div class="row">
-                 <div class="col">
-                     <img src="{% static 'images/default.png' %}" alt="KIA" id="KIA_main">
-                 </div>
-             </div>
+            <div class="row">
+                <div class="col">
+                    <img src="{% static 'images/default.png' %}" alt="KIA" id="KIA_main">
+                </div>
+            </div>
 
-             <!-- По сути костыль который нужен для отступа эллемента... -->
-             <div class="indent_3"></div>
-             <!-- Кнопки -->
-             {% include 'template/button.html' %}
+       <!-- По сути костыль который нужен для отступа эллемента... -->
+       <div class="indent_3"></div>
+       <!-- Кнопки -->
+       {% include 'template/button.html' %}
 
 
-             <!-- line_price -->
-             <div class="row" >
-                 <div class="col" style="text-align: center"> <img src="{% static 'images/active.png' %}" alt="" class="line_price"> </div>
-             </div>
-         </div>
-         {% include 'template/slaider.html' %}
-         {% include 'template/calculator.html' %}
-         {% include 'template/foot.html' %}
-        <script src="{% static 'js/slaider.js' %}" charset="utf-8"></script>
-    </body>
+       <!-- line_price -->
+       <div class="row" >
+           <div class="col" style="text-align: center"> <img src="{% static 'images/active.png' %}" alt="" class="line_price"> </div>
+       </div>
+   </div>
+   {% include 'template/slaider.html' %}
+   {% include 'template/calculator.html' %}
+   {% include 'template/foot.html' %}
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="{% static 'js/callback_call.js' %}" charset="utf-8"></script>
+ <script src="{% static 'js/slaider.js' %}" charset="utf-8"></script>
+ </body>
 </html>

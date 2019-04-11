@@ -16,6 +16,7 @@
  </head>
  <body>
      <body>
+         <div class="js_overlay"></div>
          {% include 'template/head.html' %}
          <!-- Пример оптимы -->
          <!-- По сути костыль который нужен для отступа эллемента... -->
@@ -33,7 +34,6 @@
              </div>
              <!-- По сути костыль который нужен для отступа эллемента... -->
              <div class="indent_2"></div>
-
 
               <!-- img -->
               <div class="row">
@@ -74,6 +74,8 @@
       {% include 'template/slaider.html' %}
       {% include 'template/calculator.html' %}
       {% include 'template/foot.html' %}
-     <script src="{% static 'js/slaider.js' %}" charset="utf-8"></script>
- </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'js/callback_call.js' %}" charset="utf-8"></script>
+    <script src="{% static 'js/slaider.js' %}" charset="utf-8"></script>
+    </body>
 </html>

@@ -5,7 +5,7 @@ from . import views
 urlpatterns = [
     # Основные страницы
     path('', views.default, name='default'),
-    path('inl/', views.inl, name='inl'),
+    # path('inl/', views.inl, name='inl'), Пока рано
     path('optima/', views.optima, name='optima'),
     path('rio/', views.rio, name='rio'),
     path('sportage/', views.sportage, name='sportage'),
