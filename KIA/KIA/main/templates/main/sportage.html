@@ -4,7 +4,7 @@
  <head>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Optima</title>
+     <title>SPORTAGE</title>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <link rel="stylesheet" href="{% static 'style/font.css' %}">
      <link rel="stylesheet" href="{% static 'style/head_bg.css' %}">
@@ -18,12 +18,11 @@
      <body>
          <div class="js_overlay"></div>
          {% include 'template/head.html' %}
-         <!-- Пример оптимы -->
          <!-- По сути костыль который нужен для отступа эллемента... -->
          <div class="indent_1"></div>
          <div class="container main">
              <!-- slaider -->
-             <div class="ball_slaider_block">
+             <div class="ball_slaider_block pc">
                   <a href="../"><div class="ball_slaider"></div></a>
                   <a href="../rio/"><div class="ball_slaider"></div></a>
                   <a href="../sportage/"><div class="ball_slaider active_slide"></div></a>
@@ -36,12 +35,12 @@
               <div class="indent_2"></div>
 
                <!-- img -->
-              <div class="row">
+              <div class="row pc">
                   <div class="col">
                       <img src="{% static 'images/sportage.png' %}" alt="KIA" id="KIA_main">
                   </div>
               </div>
-              <div class="row">
+              <div class="row pc">
                   <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                       <div class="border_block_left">
                           <img class="bildbord" src="{% static 'images/bilborder.png' %}" alt="">
@@ -53,14 +52,29 @@
                       <div class="border_block_right">
                           <img class="bildbord" src="{% static 'images/bilborder.png' %}" alt="">
                           <p class="text_title_min">Осталось в продаже</p>
-                          <p class="text_title_max">2 автомобилей</p>
+                          <p class="text_title_max">2 автомобиля</p>
                       </div>
                   </div>
                </div>
-               <!-- Кнопки для перехода между главными страницами -->
-               <img src="{% static 'images/slider_mobile_left.png' %}" alt="" class="slider_mobile_left_main mobile">
-               <img src="{% static 'images/slider_mobile_right.png' %}" alt="" class="slider_mobile_right_main mobile">
-          <!-- По сути костыль который нужен для отступа эллемента... -->
+
+               <!-- адаптив под мобилки -->
+               <div class="row mobile">
+                   <div class="col kia_main_mobile">
+                       <img src="{% static 'images/sportage.png' %}" alt="KIA" id="KIA_main">
+                   </div>
+               </div>
+              <div class="row mobile">
+                  <a href="../optima/" class="slider_main_list_mobile mobile"><img class="main_sale_mobile" src="{% static 'images/main_sale_mobile.png' %}" alt=""></a>
+                  <div class="border_block_right">
+                      <p class="text_title_min">Осталось в наличии</p>
+                      <p class="text_title_max">2 автомобиля</p>
+                      <br>
+                  </div>
+                  <div class="border_block_left">
+                      <p class="text_title_min">Выгода до</p>
+                      <p class="text_title_max">98 000 руб</p>
+                  </div>
+               </div>          <!-- По сути костыль который нужен для отступа эллемента... -->
           <div class="indent_3"></div>
           <!-- Кнопки -->
           {% include 'template/button.html' %}

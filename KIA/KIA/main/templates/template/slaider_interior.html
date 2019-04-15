@@ -1,11 +1,11 @@
 {% load static %}
         <div class="slider">
             <!-- тени -->
-            <div class="shadow_slider_right"></div>
-            <div class="shadow_slider_left"></div>
+            <div class="shadow_slider_right pc"></div>
+            <div class="shadow_slider_left pc"></div>
             <!-- кнопочки -->
-            <div class="slider__arrow slider__left"></div>
-            <div class="slider__arrow slider__right"></div>
+            <div class="slider__arrow slider__left"><img class="slider_mobile_left mobile" src="{% static 'images/slider_mobile_left.png' %}" alt=""></div>
+            <div class="slider__arrow slider__right"><img class="slider_mobile_right mobile" src="{% static 'images/slider_mobile_right.png' %}" alt=""></div>
             <div class="slider__container">
                 <!-- Костыль из-за которого нужно многократно дублировать блоки слайдера в хтмл  -->
                 <div class="slider__item">
@@ -30,10 +30,10 @@
                             <p class="text_top">Адрес салона</p>
                             <p class="text_bot">г. Пермь, шоссе Комонавтов, д. 198</p>
                         </div>
-                        <div class="img_slider_div">
-                            <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                        <div class="img_slider_div pc">
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.svg' %}" alt=""></a>
                         </div>
                 </div>
                 <div class="slider__item">
@@ -58,10 +58,10 @@
                             <p class="text_top">Адрес салона</p>
                             <p class="text_bot">г. Пермь, шоссе Комонавтов, д. 198</p>
                         </div>
-                        <div class="img_slider_div">
-                            <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                        <div class="img_slider_div pc">
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.svg' %}" alt=""></a>
                         </div>
                 </div>
                 <div class="slider__item">
@@ -86,10 +86,10 @@
                             <p class="text_top">Адрес салона</p>
                             <p class="text_bot">г. Пермь, шоссе Комонавтов, д. 198</p>
                         </div>
-                        <div class="img_slider_div">
-                            <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                        <div class="img_slider_div pc">
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.svg' %}" alt=""></a>
                         </div>
                 </div>
                 <div class="slider__item">
@@ -114,10 +114,10 @@
                             <p class="text_top">Адрес салона</p>
                             <p class="text_bot">г. Пермь, шоссе Комонавтов, д. 198</p>
                         </div>
-                        <div class="img_slider_div">
-                            <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                        <div class="img_slider_div pc">
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.svg' %}" alt=""></a>
                         </div>
                 </div>
                 <div class="slider__item">
@@ -142,10 +142,10 @@
                             <p class="text_top">Адрес салона</p>
                             <p class="text_bot">г. Пермь, шоссе Комонавтов, д. 198</p>
                         </div>
-                        <div class="img_slider_div">
-                            <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                        <div class="img_slider_div pc">
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.svg' %}" alt=""></a>
                         </div>
                 </div>
                 <div class="slider__item">
@@ -170,10 +170,10 @@
                             <p class="text_top">Адрес салона</p>
                             <p class="text_bot">г. Пермь, шоссе Комонавтов, д. 198</p>
                         </div>
-                        <div class="img_slider_div">
-                            <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                        <div class="img_slider_div pc">
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.svg' %}" alt=""></a>
                         </div>
                 </div>
                 <div class="slider__item">
@@ -198,10 +198,10 @@
                             <p class="text_top">Адрес салона</p>
                             <p class="text_bot">г. Пермь, шоссе Комонавтов, д. 198</p>
                         </div>
-                        <div class="img_slider_div">
-                            <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                        <div class="img_slider_div pc">
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.svg' %}" alt=""></a>
                         </div>
                 </div>
                 <div class="slider__item">
@@ -226,13 +226,17 @@
                             <p class="text_top">Адрес салона</p>
                             <p class="text_bot">г. Пермь, шоссе Комонавтов, д. 198</p>
                         </div>
-                        <div class="img_slider_div">
-                            <img class="img_slaider_solo" src="{% static 'images/Test-Drive.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Info.svg' %}" alt="">
-                            <img class="img_slaider_solo" src="{% static 'images/Support.svg' %}" alt="">
+                        <div class="img_slider_div pc">
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.svg' %}" alt=""></a>
                         </div>
                 </div>
-
                 <!-- Конец экземпляров. Дальше дублирование -->
+            </div>
+            <div class="img_slider_div_mobile mobile">
+                <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.png' %}" alt=""></a>
+                <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.png' %}" alt=""></a>
+                <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.png' %}" alt=""></a>
             </div>
         </div>

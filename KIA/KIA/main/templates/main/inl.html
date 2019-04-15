@@ -3,6 +3,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ceed</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'style/font.css' %}">
@@ -14,21 +15,47 @@
     </head>
     <body >
         {% include 'template/head.html' %}
+
         <!-- По сути костыль который нужен для отступа эллемента... -->
         <div class="indent_1"></div>
-        <div class="main">
+        <div class="main pc">
             <div class="main_car_block" > <img src="{% static 'images/slaider/ceed.png' %}" class="main_car" ></div>
             <div class="main_text_block">
                 <p class="text_main">Новый Ceed JD</p>
                 <p><span class="text_left">В наличии:</span> <span class="text_right"> <b> 5 автомобилей</b> </span> <br></p>
                 <span class="text_left">Выгода:</span> <span class="text_right"> <b>69 000 р</b> </span>  <br>  <br>  <br>
+                <div class="">
                 {% include 'template/button_interior.html' %}
+                </div>
             </div>
         </div>
+        <div class="main mobile">
+            <div class="main_car_block" > <img src="{% static 'images/slaider/ceed.png' %}" class="main_car" ></div>
+            <div class="indent_4"></div>
+            <div class="row">
+              <a href="#" class="slider_main_list_mobile mobile"><img class="main_sale_mobile" src="{% static 'images/main_sale_mobile.png' %}" alt=""></a>
+              <div class="border_block_right">
+                  <p class="text_title_min">Осталось в наличии</p>
+                  <p class="text_title_max">8 автомобилей</p>
+                  <br>
+              </div>
+              <div class="border_block_left">
+                  <p class="text_title_min">Выгода до</p>
+                  <p class="text_title_max">120 000 руб</p>
+              </div>
+            </div>
+            {% include 'template/button.html' %}
+        </div>
+
+        <div class="indent_3"></div>
+
         <p class="text_catalog">Автомобили в наличии:</p>
         {% include 'template/slaider_interior.html' %}
+        <div class="indent_2"></div>
         {% include 'template/calculator.html' %}
         {% include 'template/foot.html' %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{% static 'js/callback_call.js' %}" charset="utf-8"></script>
         <script src="{% static 'js/slaider.js' %}" charset="utf-8"></script>
     </body>
 </html>
