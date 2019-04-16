@@ -1,5 +1,5 @@
-.interior_link_interior{
-    display: none;
+.mobile_interior_link{
+    display: block;
 }
 a{text-decoration: none;}
 a:hover { text-decoration: none; color: white}
@@ -111,7 +111,16 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     text-align: center;
     z-index: 100;
 }
-/*  копипас*/
+/* callback and button */
+.button {
+    padding: 15px;
+    height: 60px;
+    background: #CC2A2F; /* фон кнопки */
+    outline: none; /* убирать контур в Mozilla */
+    transition: 0.4s;
+    border-radius: 6px;
+    box-shadow: 0 14px 28px rgba(204,42,47,0.45), 0 10px 10px rgba(204,42,47,0.45);
+}
 div.button:hover { background: #fcc8c8; box-shadow: 0 14px 28px rgba(252,200,200,0.35), 0 10px 10px rgba(252,200,200,0.45); } /* при наведении курсора мышки */
 div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,42,47,0.45), 0 10px 10px rgba(204,42,47,0.45);} /* при нажатии */
 .button_icon {
@@ -121,6 +130,16 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     right: 20px;
     top:0;
     margin: 7.5px;
+}
+.button_text{
+  color: #fff; /* цвет текста */
+  font-size: 23px;
+  font-family: "KiaM";
+  line-height: 1.2;
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  padding: .6em 1.2em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
 }
 
 /* Нужно для затемнения фона */
@@ -238,7 +257,6 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
 	height: 23px;
 	cursor: pointer;
 }
-
 .close_window:before {
 	content: '';
 	background-color: white;
@@ -249,7 +267,6 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
 	left: -4px;
 	transform: rotate(-45deg);
 }
-
 .close_window:after {
 	content: '';
 	background-color: white;
@@ -260,8 +277,6 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
 	transform: rotate(45deg);
 	left: -4px;
 }
-
-
 .margin_button_left{margin-left: 5%;}
 .line_price{
     width: 100%; margin: 30px;
@@ -273,347 +288,109 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     height: 200px;
 }
 
-    @media  (max-width: 300px) {
-        /* Для избежания багов нужно фон большего размера в ширину. */
-        .pc{display: none;}
-        /* head_bg */
-        body{background: url(../images/bg_mobile.png) 0 -280px no-repeat, #58090D; position: absolute; width: 100%;}
-        .KIA_icon   {height: 72px; left: 10px;}
-        .block_text_head{left: 40%; width: 60%;}
-        .head_block {height: 80px; position: absolute;}
-        .head_text  {font-size: 16px; float: none; margin-top: 3px; margin-right: 5%; height: 19px;}
-        /* main_block */
-        .indent_1 {height: 90px;}
-        .indent_2 {height: 25px;}
-        .indent_3 {height: 25px;}
-        #global_name{font-size: 51px;}
-        #KIA_main{width: 170%; margin-left: -40%; margin-right: -30%; margin-bottom: 35px;}
-        .main_sale_mobile{position: absolute; z-index: -1; width: 80%; left: 10%;}
-        .border_block_left{position: static; height: 100%; width: 100%;}
-        .border_block_right{position: static; height: 100%; width: 100%;}
-        .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 16px; line-height: 1.5;}
-        .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 21px; line-height: 1.6;}
-
-        .line_price{display: none}
-        .margin_button_left{margin-left: 0;}
-        .button_text{font-size: 23px;}
-        .button_icon{height: 40px; width: 40px; margin: 15px;}
-        .button{margin: 10px; padding: 12px; height: 50px;}
-        /* callback */
-        .callback_form_test{width: 90%; left: 5%;}
-        .callback_form_more{width: 90%; left: 5%;}
-        .callback_form_consul{width: 90%; left: 5%;}
-        .callback_top_text{line-height: 1}
-        .personal_text{line-height: 1}
-        .input_callback{width: 85%;}
-        .callback_button_in_form{width: 85%;}
-        /* slaider */
-        .slider {height: 420px; }
-        .slider__item {margin: 7.5%; width: 35%; height: 300px; }
-        .slider__container.left{left: -100%}
-        .slider__item{border-radius: 4px; box-shadow: 0 14px 28px rgba(0,0,0,0.8), 0 10px 10px rgba(204,42,47,0.45);}
-        .car_slider{border-radius: 0px;}
-        .slider__arrow {width: 15%;}
-        .slider_mobile_left{display: block; position: absolute; top: 30%;  left: 45%; width: 20px; height: 40px; z-index: 1000;}
-        .slider_mobile_right{display: block; position: absolute; top: 30%; right: 45%; width: 20px; height: 40px; z-index: 1000;}
-        .shadow_slider_left{display: none}
-        .shadow_slider_right{display: none}
-        .car_name{font-size: 24px;}
-        .remainder{font-size: 18px; color: #4A4E5A; line-height: 0.3;}
-        .remainder_b{font-size: 19px; color: #4A4E5A; line-height: 0;}
-        .discount{font-size: 16px; color: #58090D; border: 2px solid #58090D; margin-top: 30px;}
-        .img_slider_div_mobile{position: absolute; width: 90%;  text-align: center; bottom: 0px; left: 5%;}
-        /* calculator */
-        .main_calculator{margin-top: 30px;}
-        .calculator_text_top{font-size: 16px;}
-        .calculator_text_mid{font-size: 17px;}
-        .block_calculator_input { width: 100%; font-size: 22px;}
-        .input_name_calculator {font-size: 18px;}
-        .input_calculator {height: 45px; padding:6px 18px; border-radius: 4px;}
-        .parent{height: 100px;}
-        .button_calculator{position: absolute; left: 10%; right: 10%; font-size: 21px;}
-        /* bot */
-        .bot {all: initial; text-align: center; margin-top: 50px; width: 100%;}
-        .bot_text{display: block;; text-align: center; font-family: "KiaM"; line-height: 2.4; margin: 0 0 0 0; font-size: 13px; color: #FBD6D7;}
-        .bot_number_button{width: 60%; margin-left: 20%; height: 50px; font-weight: 700; color: #D3474A; padding: .4em 1em calc(.8em + 3px); border-radius: 6px;
-            background: white; box-shadow: 0 -3px #991726 inset; transition: 0.3s; text-align: center; font-family: "KiaM"}
-    }
-    @media  (max-width: 280px) {    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 15px; line-height: 1.5;}
-                                    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 18px; line-height: 1.6;}}
-    @media  (min-width: 300px) and (max-width: 576px) {
-        /* Для избежания багов нужно фон большего размера в ширину. */
-        .pc{display: none;}
-        /* head_bg */
-        body{background: url(../images/bg_mobile.png) 0 -280px no-repeat, #58090D; position: absolute; width: 100%;}
-        .KIA_icon   {height: 82px; left: 20px;}
-        .block_text_head{left: 40%; width: 60%;}
-        .head_block {height: 95px; position: absolute;}
-        .head_text  {font-size: 16px; float: none; margin-top: 3px; margin-right: 5%; height: 30px;}
-        /* main_block */
-        .indent_1 {height: 110px;}
-        .indent_2 {height: 25px;}
-        .indent_3 {height: 25px;}
-        #global_name{font-size: 51px;}
-        #KIA_main{width: 170%; margin-left: -40%; margin-right: -30%; margin-bottom: 35px;}
-        .main_sale_mobile{position: absolute; z-index: -1; width: 80%; left: 10%;}
-        .border_block_left{position: static; height: 100%; width: 100%;}
-        .border_block_right{position: static; height: 100%; width: 100%;}
-        .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 19px; line-height: 1.6;}
-        .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 25px; line-height: 1.7;}
-
-        .line_price{display: none}
-        .margin_button_left{margin-left: 0;}
-        .button_text{font-size: 23px;}
-        .button_icon{height: 40px; width: 40px; margin: 15px;}
-        .button{margin: 10px; padding: 12px; height: 50px;}
-        /* callback */
-        .callback_form_test{width: 90%; left: 5%;}
-        .callback_form_more{width: 90%; left: 5%;}
-        .callback_form_consul{width: 90%; left: 5%;}
-        .callback_top_text{line-height: 1}
-        .personal_text{line-height: 1}
-        .input_callback{width: 85%;}
-        .callback_button_in_form{width: 85%;}
-        /* slaider */
-        .slider {height: 470px; }
-        .slider__item {margin: 7.5%; width: 35%; height: 320px; }
-        .slider__container.left{left: -100%}
-        .slider__item{border-radius: 4px; box-shadow: 0 14px 28px rgba(0,0,0,0.8), 0 10px 10px rgba(204,42,47,0.45);}
-        .car_slider{border-radius: 0px;}
-        .slider__arrow {width: 15%;}
-        .slider_mobile_left{display: block; position: absolute; top: 30%;  left: 45%; width: 20px; height: 40px; z-index: 1000;}
-        .slider_mobile_right{display: block; position: absolute; top: 30%; right: 45%; width: 20px; height: 40px; z-index: 1000;}
-        .shadow_slider_left{display: none}
-        .shadow_slider_right{display: none}
-        .car_name{font-size: 24px;}
-        .remainder{font-size: 18px; color: #4A4E5A; line-height: 0.3;}
-        .remainder_b{font-size: 19px; color: #4A4E5A; line-height: 0;}
-        .discount{font-size: 18px; color: #58090D; border: 2px solid #58090D; margin-top: 40px;}
-        .img_slider_div_mobile{position: absolute; width: 90%;  text-align: center; bottom: -20px; left: 5%;}
-        /* calculator */
-        .main_calculator{margin-top: 40px;}
-        .calculator_text_top{font-size: 20px;}
-        .calculator_text_mid{font-size: 21px;}
-        .block_calculator_input { width: 100%; font-size: 30px;}
-        .input_name_calculator {font-size: 22px;}
-        .input_calculator {height: 45px; padding:6px 18px; border-radius: 4px;}
-        .parent{height: 100px;}
-        .button_calculator{position: absolute; left: 10%; right: 10%; font-size: 24px;}
-        /* bot */
-        .bot {all: initial; text-align: center; margin-top: 50px; width: 100%;}
-        .bot_text{display: block; text-align: center; font-family: "KiaM"; line-height: 2.4; margin: 0 0 0 0; font-size: 16px; color: #FBD6D7;}
-        .bot_number_button{width: 60%; margin-left: 20%; height: 50px; font-weight: 700; color: #D3474A; padding: .4em 1em calc(.8em + 3px); border-radius: 6px;
-            background: white; box-shadow: 0 -3px #991726 inset; transition: 0.3s; text-align: center; font-family: "KiaM"}
-    }
-    @media (min-width: 576px) and (max-width: 768px) {
-        /* Для избежания багов нужно фон большего размера в ширину. */
-        .pc{display: none;}
-        /* head_bg */
-        body{background: url(../images/bg_mobile.png) 0 -280px no-repeat, #58090D; position: absolute; width: 100%;}
-        .KIA_icon   {height: 95px; left: 30px;}
-        .block_text_head{left: 40%; width: 60%;}
-        .head_block {height: 110px; position: absolute;}
-        .head_text  {font-size: 20px; float: none; margin-top: 4px; margin-right: 5%; height: 30px;}
-        /* main_block */
-        .indent_1 {height: 110px;}
-        .indent_2 {height: 45px;}
-        .indent_3 {height: 55px;}
-        #global_name{font-size: 60px;}
-        #KIA_main{width: 170%; margin-left: -40%; margin-right: -30%; margin-bottom: 35px;}
-        .main_sale_mobile{position: absolute; z-index: -1; width: 80%; left: 10%;}
-        .border_block_left{position: static; height: 100%; width: 100%;}
-        .border_block_right{position: static; height: 100%; width: 100%;}
-        .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 34px; line-height: 1.3;}
-        .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 44px; line-height: 1.3;}
-
-        .line_price{display: none}
-        .margin_button_left{margin-left: 0;}
-        .button_text{font-size: 27px;}
-        .button_icon{height: 50px; width: 50px; margin: 15px;}
-        .button{margin: 10px; padding: 12px; height: 60px;}
-        /* callback */
-        .callback_form_test{width: 90%; left: 5%;}
-        .callback_form_more{width: 90%; left: 5%;}
-        .callback_form_consul{width: 90%; left: 5%;}
-        .callback_top_text{line-height: 1}
-        .personal_text{line-height: 1}
-        .input_callback{width: 85%;}
-        .callback_button_in_form{width: 85%;}
-        /* slaider */
-        .slider {height: 790px; }
-        .slider__item {margin: 7.5%; width: 35%; height: 520px; }
-        .slider__container.left{left: -100%}
-        .slider__item{border-radius: 4px; box-shadow: 0 14px 28px rgba(0,0,0,0.8), 0 10px 10px rgba(204,42,47,0.45);}
-        .car_slider{border-radius: 0px;}
-        .slider__arrow {width: 15%;}
-        .slider_mobile_left{display: block; position: absolute; top: 30%;  left: 45%; width: 20px; height: 40px; z-index: 1000;}
-        .slider_mobile_right{display: block; position: absolute; top: 30%; right: 45%; width: 20px; height: 40px; z-index: 1000;}
-        .shadow_slider_left{display: none}
-        .shadow_slider_right{display: none}
-        .car_name{font-size: 39px;}
-        .remainder{font-size: 28px; color: #4A4E5A; line-height: 0.6;}
-        .remainder_b{font-size: 29px; color: #4A4E5A; line-height: 0.2;}
-        .discount{font-size: 26px; color: #58090D; border: 2px solid #58090D; margin-top: 40px;}
-        .img_slider_div_mobile{position: absolute; width: 90%;  text-align: center; bottom: 0px; left: 5%;}
-        /* calculator */
-        .main_calculator{margin-top: 40px;}
-        .calculator_text_top{font-size: 20px;}
-        .calculator_text_mid{font-size: 21px;}
-        .block_calculator_input { width: 100%; font-size: 30px;}
-        .input_name_calculator {font-size: 22px;}
-        .input_calculator {height: 45px; padding:6px 18px; border-radius: 4px;}
-        .parent{height: 100px;}
-        .button_calculator{position: absolute; left: 10%; right: 10%; font-size: 24px;}
-        /* bot */
-        .bot {all: initial; text-align: center; margin-top: 50px; width: 100%;}
-        .bot_text{display: block; text-align: center; font-family: "KiaM"; line-height: 2.4; margin: 0 0 0 0; font-size: 24px; color: #FBD6D7;}
-        .bot_number_button{width: 60%; margin-left: 20%; height: 74px; font-weight: 700; color: #D3474A; padding: .4em 1em calc(.8em + 3px); border-radius: 6px;
-            background: white; box-shadow: 0 -3px #991726 inset; transition: 0.3s; text-align: center; font-family: "KiaM"}
-    }
-
-    @media  (max-width: 768px) {    #global_name{font-size: 81px;}
-                                    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 46px; line-height: 1.4;}
-                                    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 49px; line-height: 1.1;}
-                                    .slider {height: 835px; }
-                                    .slider__item {margin: 7.5%; width: 35%; height: 545px;}
-                                    .calculator_text_top{font-size: 16px;}
-                                    .calculator_text_mid{font-size: 17px;}
-                                    .block_calculator_input { width: 100%; font-size: 21px;}
-                                    .input_name_calculator {font-size: 16px;}
-                                    .button_calculator{position: absolute; left: 15%; right: 15%; font-size: 24px;}
-    }
-    @media  (max-width: 710px) {    #global_name{font-size: 77px;}
-                                    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 40px; line-height: 1.3;}
-                                    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 43px; line-height: 1.1;}
-                                    .slider {height: 795px; }
-                                    .slider__item {margin: 7.5%; width: 35%; height: 535px;}
-                                    .calculator_text_top{font-size: 16px;}
-                                    .calculator_text_mid{font-size: 17px;}
-                                    .block_calculator_input { width: 100%; font-size: 21px;}
-                                    .input_name_calculator {font-size: 16px;}
-                                    .button_calculator{position: absolute; left: 15%; right: 15%; font-size: 24px;}
-    }
-    @media  (max-width: 660px) {    #global_name{font-size: 73px;}
-                                .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 37px; line-height: 1.3;}
-                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 40px; line-height: 1.1;}
-                                .slider {height: 775px; }
-                                .slider__item {margin: 7.5%; width: 35%; height: 535px;}
-                                .calculator_text_top{font-size: 16px;}
-                                .calculator_text_mid{font-size: 17px;}
-                                .block_calculator_input { width: 100%; font-size: 21px;}
-                                .input_name_calculator {font-size: 16px;}
-    }
-    @media  (max-width: 590px) {    #global_name{font-size: 68px;}
-                                    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 34px; line-height: 1.3;}
-                                    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 37px; line-height: 1.1;}
-                                    .slider {height: 665px; }
-                                    .slider__item {margin: 7.5%; width: 35%; height: 465px;}
-                                    .calculator_text_top{font-size: 16px;}
-                                    .calculator_text_mid{font-size: 17px;}
-                                    .block_calculator_input { width: 100%; font-size: 21px;}
-                                    .input_name_calculator {font-size: 16px;}
-    }
-    @media  (max-width: 576px) {    #global_name{font-size: 68px;}
-                                    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 31px; line-height: 1.3;}
-                                    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 34px; line-height: 1.1;}
-                                    .slider {height: 605px; }
-                                    .slider__item {margin: 7.5%; width: 35%; height: 405px;}
-                                    .calculator_text_top{font-size: 16px;}
-                                    .calculator_text_mid{font-size: 17px;}
-                                    .block_calculator_input { width: 100%; font-size: 21px;}
-                                    .input_name_calculator {font-size: 16px;}
-                                }
-    @media  (max-width: 540px) {    #global_name{font-size: 68px;}
-                                    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 31px; line-height: 1.3;}
-                                    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 34px; line-height: 1.1;}
-                                    .slider {height: 585px; }
-                                    .slider__item {margin: 7.5%; width: 35%; height: 385px;}
-                                    .calculator_text_top{font-size: 16px;}
-                                    .calculator_text_mid{font-size: 17px;}
-                                    .block_calculator_input { width: 100%; font-size: 21px;}
-                                    .input_name_calculator {font-size: 16px;}
-                                }
-    @media  (max-width: 500px) {    #global_name{font-size: 63px;}
-                                    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 28px; line-height: 1.3;}
-                                    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 31px; line-height: 1.1;}
-                                    .slider {height: 565px; }
-                                    .slider__item {margin: 7.5%; width: 35%; height: 375px;}
-                                    .calculator_text_top{font-size: 16px;}
-                                    .calculator_text_mid{font-size: 17px;}
-                                    .block_calculator_input { width: 100%; font-size: 21px;}
-                                    .input_name_calculator {font-size: 16px;}
-                                }
-    @media  (max-width: 465px) {    #global_name{font-size: 63px;}
-                                    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 26px; line-height: 1.3;}
-                                    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 28px; line-height: 1.1;}
-                                    .slider {height: 525px; }
-                                    .slider__item {margin: 7.5%; width: 35%; height: 355px;}
-                                    .calculator_text_top{font-size: 16px;}
-                                    .calculator_text_mid{font-size: 17px;}
-                                    .block_calculator_input { width: 100%; font-size: 21px;}
-                                    .input_name_calculator {font-size: 16px;}
-                                }
-    @media  (max-width: 425px) {    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 24px; line-height: 1.3;}
-                                    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 26px; line-height: 1.1;}
-                                    .slider {height: 490px; }
-                                    .slider__item {margin: 7.5%; width: 35%; height: 340px;}
-                                    .calculator_text_top{font-size: 16px;}
-                                    .calculator_text_mid{font-size: 17px;}
-                                    .block_calculator_input { width: 100%; font-size: 21px;}
-                                    .input_name_calculator {font-size: 16px;}
-                                }
-    @media  (max-width: 370px) {    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 20px; line-height: 1.3;}
-                                    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 22px; line-height: 1.1;}
-                                    .slider {height: 470px; }
-                                    .slider__item {margin: 7.5%; width: 35%; height: 340px;}
-                                    .calculator_text_top{font-size: 16px;}
-                                    .calculator_text_mid{font-size: 17px;}
-                                    .block_calculator_input { width: 100%; font-size: 21px;}
-                                    .input_name_calculator {font-size: 16px;}
-                                }
-    @media  (max-width: 335px) {    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 18px; line-height: 1.3;}
-                                    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 20px; line-height: 1.1;}
-                                    .slider {height: 450px; }
-                                    .slider__item {margin: 7.5%; width: 35%; height: 320px;}
-                                    .calculator_text_top{font-size: 16px;}
-                                    .calculator_text_mid{font-size: 17px;}
-                                    .block_calculator_input { width: 100%; font-size: 21px;}
-                                    .input_name_calculator {font-size: 16px;}
-                                }
-@media (min-width: 768px) and (max-width: 990px) {
+@media  (max-width: 300px) {
     /* Для избежания багов нужно фон большего размера в ширину. */
     .pc{display: none;}
     /* head_bg */
-    body{background: url(../images/bg_mobile.png) 0 -280px no-repeat, #58090D; position: absolute; width: 100%;}
+    body{background: url(../images/bg_mobile_interior.png) 0 0 no-repeat, #790911; background-size: 100%; }
+    .KIA_icon   {height: 72px; left: 10px;}
+    .block_text_head{left: 40%; width: 60%;}
+    .head_block {height: 80px; position: absolute;}
+    .head_text  {font-size: 16px; float: none; margin-top: 3px; margin-right: 5%; height: 19px;}
+    /* main_block */
+    .indent_1 {height: 90px;}
+    .indent_2 {height: 25px;}
+    .indent_3 {height: 25px;}
+    #global_name{font-size: 51px;}
+    #KIA_main{width: 170%; margin-left: -40%; margin-right: -30%; margin-bottom: 35px;}
+    .main_sale_mobile{position: absolute; z-index: -1; width: 80%; left: 10%;}
+    .border_block_left{position: static; height: 100%; width: 100%;}
+    .border_block_right{position: static; height: 100%; width: 100%;}
+    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 16px; line-height: 1.5;}
+    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 21px; line-height: 1.6;}
+
+    .line_price{display: none}
+    .margin_button_left{margin-left: 0;}
+    .button_text{font-size: 23px;}
+    .button_icon{height: 40px; width: 40px; margin: 15px;}
+    .button{margin: 10px; padding: 12px; height: 50px;}
+    /* callback */
+    .callback_form_test{width: 90%; left: 5%;}
+    .callback_form_more{width: 90%; left: 5%;}
+    .callback_form_consul{width: 90%; left: 5%;}
+    .callback_top_text{line-height: 1}
+    .personal_text{line-height: 1}
+    .input_callback{width: 85%;}
+    .callback_button_in_form{width: 85%;}
+    /* slaider */
+    .slider {height: 420px; }
+    .slider__item {margin: 7.5%; width: 35%; height: 300px; }
+    .slider__container.left{left: -100%}
+    .slider__item{border-radius: 4px; box-shadow: 0 14px 28px rgba(0,0,0,0.8), 0 10px 10px rgba(204,42,47,0.45);}
+    .car_slider{border-radius: 0px;}
+    .slider__arrow {width: 15%;}
+    .slider_mobile_left{display: block; position: absolute; top: 30%;  left: 45%; width: 20px; height: 40px; z-index: 1000;}
+    .slider_mobile_right{display: block; position: absolute; top: 30%; right: 45%; width: 20px; height: 40px; z-index: 1000;}
+    .shadow_slider_left{display: none}
+    .shadow_slider_right{display: none}
+    .car_name{font-size: 24px;}
+    .remainder{font-size: 18px; color: #4A4E5A; line-height: 0.3;}
+    .remainder_b{font-size: 19px; color: #4A4E5A; line-height: 0;}
+    .discount{font-size: 16px; color: #58090D; border: 2px solid #58090D; margin-top: 30px;}
+    .img_slider_div_mobile{position: absolute; width: 90%;  text-align: center; bottom: 0px; left: 5%;}
+    /* calculator */
+    .main_calculator{margin-top: 30px;}
+    .calculator_text_top{font-size: 16px;}
+    .calculator_text_mid{font-size: 17px;}
+    .block_calculator_input { width: 100%; font-size: 22px;}
+    .input_name_calculator {font-size: 18px;}
+    .input_calculator {height: 45px; padding:6px 18px; border-radius: 4px;}
+    .parent{height: 100px;}
+    .button_calculator{position: absolute; left: 10%; right: 10%; font-size: 21px;}
+    /* bot */
+    .bot {all: initial; text-align: center; margin-top: 50px; width: 100%;}
+    .bot_text{display: block;; text-align: center; font-family: "KiaM"; line-height: 2.4; margin: 0 0 0 0; font-size: 13px; color: #FBD6D7;}
+    .bot_number_button{width: 60%; margin-left: 20%; height: 50px; font-weight: 700; color: #D3474A; padding: .4em 1em calc(.8em + 3px); border-radius: 6px;
+        background: white; box-shadow: 0 -3px #991726 inset; transition: 0.3s; text-align: center; font-family: "KiaM"}
+}
+@media  (max-width: 280px) {    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 15px; line-height: 1.5;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 18px; line-height: 1.6;}}
+@media  (min-width: 300px) and (max-width: 576px) {
+    /* Для избежания багов нужно фон большего размера в ширину. */
+    .pc{display: none;}
+    .mobile_interior_link{display: block;}
+    .main_link{display: none;}
+    /* head_bg */
+    body{background: url(../images/bg_mobile_interior.png) 0 0 no-repeat, #790911; background-size: 100%; }
     .KIA_icon   {height: 95px; left: 30px;}
     .block_text_head{left: 40%; width: 60%;}
     .head_block {height: 110px; position: absolute;}
     .head_text  {font-size: 20px; float: none; margin-top: 4px; margin-right: 5%; height: 30px;}
     /* main_block */
+    .main{top: 150px;}
     .indent_0 {height: 160px;}
-    .indent_1 {height: 410px;}
+    .indent_1 {height: 930px;}
     .indent_2 {height: 25px;}
-    .indent_3 {height: 155px;}
+    .indent_3 {height: 25px;}
     .indent_4 {height: 35px;}
+    .indent_5 {height: 45px;}
     .main_car_block{width: 100%;}
-    .main_text_block{}
-    #global_name{font-size: 60px;}
-    #KIA_main{width: 170%; margin-left: -40%; margin-right: -30%; margin-bottom: 35px;}
     .main_sale_mobile{position: absolute; z-index: -1; width: 80%; left: 10%;}
     .border_block_left{position: static; height: 100%; width: 100%;}
     .border_block_right{position: static; height: 100%; width: 100%;}
+    .text_catalog{margin-bottom: -80px;}
     .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 28px; line-height: 1.3;}
     .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 34px; line-height: 1.3;}
 
-    .line_price{display: none}
     .margin_button_left{margin-left: 0;}
     .button_text{font-size: 27px;}
-    .button_icon{height: 50px; width: 50px; margin: 15px;}
-    .button{margin: 10px; padding: 12px; height: 60px;}
+    .button_icon{height: 50px; width: 50px; margin: 5px; margin-right: -7.5%;}
+    .button{margin: 10px; padding: 12px; height: 60px; margin-left: -10%; width: 120%;}
+    .main_car_block{width: 130%; margin-left: -15%;}
     /* callback */
-    .callback_form_test{width: 90%; left: 5%;}
-    .callback_form_more{width: 90%; left: 5%;}
-    .callback_form_consul{width: 90%; left: 5%;}
+    .callback_form_test{width: 150%; left: -25%;}
+    .callback_form_more{width: 150%; left: -25%;}
+    .callback_form_consul{width: 150%; left: -25%;}
     .callback_top_text{line-height: 1}
     .personal_text{line-height: 1}
     .input_callback{width: 85%;}
@@ -646,7 +423,144 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .bot_text{display: block; text-align: center; font-family: "KiaM"; line-height: 2.4; margin: 0 0 0 0; font-size: 24px; color: #FBD6D7;}
     .bot_number_button{width: 60%; margin-left: 20%; height: 74px; font-weight: 700; color: #D3474A; padding: .4em 1em calc(.8em + 3px); border-radius: 6px;
         background: white; box-shadow: 0 -3px #991726 inset; transition: 0.3s; text-align: center; font-family: "KiaM"}
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Для избежания багов нужно фон большего размера в ширину. */
+    .pc{display: none;}
+    .mobile_interior_link{display: block;}
+    .main_link{display: none;}
+    /* head_bg */
+    body{background: url(../images/bg_mobile_interior.png) 0 0 no-repeat, #790911; background-size: 100%; }
+    .KIA_icon   {height: 95px; left: 30px;}
+    .block_text_head{left: 40%; width: 60%;}
+    .head_block {height: 110px; position: absolute;}
+    .head_text  {font-size: 20px; float: none; margin-top: 4px; margin-right: 5%; height: 30px;}
+    /* main_block */
+    .main{top: 150px;}
+    .indent_0 {height: 160px;}
+    .indent_1 {height: 930px;}
+    .indent_2 {height: 0;}
+    .indent_3 {height: 25px;}
+    .indent_4 {height: 35px;}
+    .indent_5 {height: 45px;}
+    .main_car_block{width: 100%;}
+    .main_sale_mobile{position: absolute; z-index: -1; width: 80%; left: 10%;}
+    .border_block_left{position: static; height: 100%; width: 100%;}
+    .border_block_right{position: static; height: 100%; width: 100%;}
+    .text_catalog{margin-bottom: -80px;}
+    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 28px; line-height: 1.3;}
+    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 34px; line-height: 1.3;}
 
+    .main_car_block{width: 130%; margin-left: -15%;}
+    .margin_button_left{margin-left: 0;}
+    .button_text{font-size: 27px;}
+    .button_icon{height: 50px; width: 50px; margin: 5px; margin-right: -7.5%;}
+    .button{margin: 10px; padding: 12px; height: 60px; margin-left: -10%; width: 120%;}
+    /* callback */
+    .callback_form_test{width: 150%; left: -25%;}
+    .callback_form_more{width: 150%; left: -25%;}
+    .callback_form_consul{width: 150%; left: -25%;}
+    .callback_top_text{line-height: 1}
+    .personal_text{line-height: 1}
+    .input_callback{width: 85%;}
+    .callback_button_in_form{width: 85%;}
+    /* slaider */
+    .slider {height: 890px; }
+    .slider__item {margin: 7.5%; width: 35%; height: 560px; }
+    .slider__container.left{left: -100%}
+    .slider__item{border-radius: 4px; box-shadow: 0 14px 28px rgba(0,0,0,0.8), 0 10px 10px rgba(204,42,47,0.45);}
+    .car_slider{border-radius: 0px;}
+    .slider__arrow {width: 15%;}
+    .slider_mobile_left{display: block; position: absolute; top: 30%;  left: 45%; width: 20px; height: 40px; z-index: 1000;}
+    .slider_mobile_right{display: block; position: absolute; top: 30%; right: 45%; width: 20px; height: 40px; z-index: 1000;}
+    .shadow_slider_left{display: none}
+    .shadow_slider_right{display: none}
+    .text_top{font-size: 20px;}
+    .text_bot{font-size: 20px;}
+    .img_slider_div_mobile{position: absolute; width: 90%;  text-align: center; bottom: 0px; left: 5%;}
+    /* calculator */
+    .main_calculator{margin-top: 40px;}
+    .calculator_text_top{font-size: 20px;}
+    .calculator_text_mid{font-size: 21px;}
+    .block_calculator_input { width: 100%; font-size: 30px;}
+    .input_name_calculator {font-size: 22px;}
+    .input_calculator {height: 45px; padding:6px 18px; border-radius: 4px;}
+    .parent{height: 100px;}
+    .button_calculator{position: absolute; left: 10%; right: 10%; font-size: 24px;}
+    /* bot */
+    .bot {all: initial; text-align: center; margin-top: 50px; width: 100%;}
+    .bot_text{display: block; text-align: center; font-family: "KiaM"; line-height: 2.4; margin: 0 0 0 0; font-size: 24px; color: #FBD6D7;}
+    .bot_number_button{width: 60%; margin-left: 20%; height: 74px; font-weight: 700; color: #D3474A; padding: .4em 1em calc(.8em + 3px); border-radius: 6px;
+        background: white; box-shadow: 0 -3px #991726 inset; transition: 0.3s; text-align: center; font-family: "KiaM"}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Для избежания багов нужно фон большего размера в ширину. */
+    .pc{display: none;}
+    .mobile_interior_link{display: block;}
+    .main_link{display: none;}
+    /* head_bg */
+    body{background: url(../images/bg_mobile_interior.png) 0 0 no-repeat, #790911; background-size: 100%; }
+    .KIA_icon   {height: 95px; left: 30px;}
+    .block_text_head{left: 40%; width: 60%;}
+    .head_block {height: 110px; position: absolute;}
+    .head_text  {font-size: 20px; float: none; margin-top: 4px; margin-right: 5%; height: 30px;}
+    /* main_block */
+    .main{top: 150px;}
+    .indent_0 {height: 160px;}
+    .indent_1 {height: 1010px;}
+    .indent_2 {height: 0;}
+    .indent_3 {height: 25px;}
+    .indent_4 {height: 35px;}
+    .indent_5 {height: 45px;}
+    .main_car_block{width: 100%;}
+    .main_sale_mobile{position: absolute; z-index: -1; width: 80%; left: 10%;}
+    .border_block_left{position: static; height: 100%; width: 100%;}
+    .border_block_right{position: static; height: 100%; width: 100%;}
+    .text_catalog{margin-bottom: -80px;}
+    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 28px; line-height: 1.3;}
+    .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 34px; line-height: 1.3;}
+
+    .main_car_block{width: 130%; margin-left: -15%;}
+    .margin_button_left{margin-left: 0;}
+    .button_text{font-size: 27px;}
+    .button_icon{height: 50px; width: 50px; margin: 5px; margin-right: -7.5%;}
+    .button{margin: 10px; padding: 12px; height: 60px; margin-left: -10%; width: 120%;}
+    /* callback */
+    .callback_form_test{width: 150%; left: -25%;}
+    .callback_form_more{width: 150%; left: -25%;}
+    .callback_form_consul{width: 150%; left: -25%;}
+    .callback_top_text{line-height: 1}
+    .personal_text{line-height: 1}
+    .input_callback{width: 85%;}
+    .callback_button_in_form{width: 85%;}
+    /* slaider */
+    .slider {height: 890px; }
+    .slider__item {margin: 7.5%; width: 35%; height: 560px; }
+    .slider__container.left{left: -100%}
+    .slider__item{border-radius: 4px; box-shadow: 0 14px 28px rgba(0,0,0,0.8), 0 10px 10px rgba(204,42,47,0.45);}
+    .car_slider{border-radius: 0px;}
+    .slider__arrow {width: 15%;}
+    .slider_mobile_left{display: block; position: absolute; top: 30%;  left: 45%; width: 20px; height: 40px; z-index: 1000;}
+    .slider_mobile_right{display: block; position: absolute; top: 30%; right: 45%; width: 20px; height: 40px; z-index: 1000;}
+    .shadow_slider_left{display: none}
+    .shadow_slider_right{display: none}
+    .text_top{font-size: 20px;}
+    .text_bot{font-size: 20px;}
+    .img_slider_div_mobile{position: absolute; width: 90%;  text-align: center; bottom: 0px; left: 5%;}
+    /* calculator */
+    .main_calculator{margin-top: 40px;}
+    .calculator_text_top{font-size: 20px;}
+    .calculator_text_mid{font-size: 21px;}
+    .block_calculator_input { width: 100%; font-size: 30px;}
+    .input_name_calculator {font-size: 22px;}
+    .input_calculator {height: 45px; padding:6px 18px; border-radius: 4px;}
+    .parent{height: 100px;}
+    .button_calculator{position: absolute; left: 20%; right: 20%; font-size: 24px;}
+    /* bot */
+    .bot {all: initial; text-align: center; margin-top: 50px; width: 100%;}
+    .bot_text{display: block; text-align: center; font-family: "KiaM"; line-height: 2.4; margin: 0 0 0 0; font-size: 24px; color: #FBD6D7;}
+    .bot_number_button{width: 60%; margin-left: 20%; height: 74px; font-weight: 700; color: #D3474A; padding: .4em 1em calc(.8em + 3px); border-radius: 6px;
+        background: white; box-shadow: 0 -3px #991726 inset; transition: 0.3s; text-align: center; font-family: "KiaM"}
 
 /* делаю мобильной, потому что текст не влазит */
 
@@ -688,7 +602,183 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
 
     .bot_text{font-size: 16px;} */
 }
-@media (min-width: 990px) and (max-width: 1200px){
+@media  (max-width: 991px) {
+                                .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 32px; line-height: 1.4;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 41px; line-height: 1.1;}
+                                .slider {height: 975px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 615px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .button_calculator{position: absolute; left: 15%; right: 15%; font-size: 24px;}
+                                .indent_1 {height: 1130px;}
+}
+@media  (max-width: 951px) {
+                                .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 32px; line-height: 1.4;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 41px; line-height: 1.1;}
+                                .slider {height: 945px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 595px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .button_calculator{position: absolute; left: 15%; right: 15%; font-size: 24px;}
+                                .indent_1 {height: 1130px;}
+}
+@media  (max-width: 880px) {
+                                .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 26px; line-height: 1.4;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 36px; line-height: 1.1;}
+                                .slider {height: 895px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 565px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .button_calculator{position: absolute; left: 15%; right: 15%; font-size: 24px;}
+                                .indent_1 {height: 1030px;}
+}
+@media  (max-width: 768px) {
+                                .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 25px; line-height: 1.4;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 29px; line-height: 1.1;}
+                                .slider {height: 825px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 515px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .button_calculator{position: absolute; left: 15%; right: 15%; font-size: 24px;}
+                                .indent_1 {height: 970px;}
+}
+@media  (max-width: 710px) {
+                                .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 22px; line-height: 1.3;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 27px; line-height: 1.1;}
+                                .slider {height: 775px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 495px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .button_calculator{position: absolute; left: 15%; right: 15%; font-size: 24px;}
+                                .indent_1 {height: 920px;}
+}
+@media  (max-width: 660px) {
+                                .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 20px; line-height: 1.3;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 24px; line-height: 1.1;}
+                                .slider {height: 735px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 475px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .button_calculator{position: absolute; left: 15%; right: 15%; font-size: 24px;}
+                                .indent_1 {height: 900px;}
+}
+@media  (max-width: 590px) {    #global_name{font-size: 68px;}
+                                .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 19px; line-height: 1.3;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 21px; line-height: 1.1;}
+                                .slider {height: 705px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 465px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .text_catalog{margin-bottom: 15px;}
+}
+@media  (max-width: 576px) {    #global_name{font-size: 68px;}
+                                .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 18px; line-height: 1.3;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 20px; line-height: 1.1;}
+                                .slider {height: 675px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 445px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .indent_1 {height: 870px;}
+                            }
+@media  (max-width: 540px) {    #global_name{font-size: 68px;}
+                                .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 17px; line-height: 1.3;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 19px; line-height: 1.1;}
+                                .slider {height: 645px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 425px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .indent_1 {height: 830px;}
+                            }
+@media  (max-width: 500px) {    #global_name{font-size: 63px;}
+                                .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 16px; line-height: 1.3;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 18px; line-height: 1.1;}
+                                .slider {height: 605px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 405px;}
+                                .text_bot{font-size: 16px;}
+                                .text_top{font-size: 17px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .indent_1 {height: 770px;}
+                            }
+@media  (max-width: 465px) {    #global_name{font-size: 63px;}
+                                .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 16px; line-height: 1.3;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 18px; line-height: 1.1;}
+                                .slider {height: 565px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 375px;}
+                                .text_bot{font-size: 16px;}
+                                .text_top{font-size: 17px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .bot_text{font-size: 18px;}
+                                .bot_number_button{height: 60px;}
+                                .button_text{font-size: 23px;}
+                                .button{padding: 13px; height: 55px;}
+                            }
+@media  (max-width: 425px) {    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 16px; line-height: 1.3;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 18px; line-height: 1.1;}
+                                .slider_main_list_mobile{width: 120%; left: -10%;}
+                                .slider {height: 550px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 390px;}
+                                .text_bot{font-size: 16px;}
+                                .text_top{font-size: 17px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .head_text  {font-size: 16px; float: none; margin-top: 4px; margin-right: 5%; height: 30px;}
+                                .indent_1 {height: 730px;}
+                            }
+@media  (max-width: 370px) {    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 14px; line-height: 1.2;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 17px; line-height: 1.1;}
+                                .slider {height: 500px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 360px;}
+                                .text_bot{font-size: 14px;}
+                                .text_top{font-size: 15px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .KIA_icon{left: 0}
+                            }
+@media  (max-width: 335px) {    .text_title_min{margin: 0 0 0 0; color: #5E1316; font-size: 13px; line-height: 1.1;}
+                                .text_title_max{margin: 0 0 0 0; color: #CC2A2F; font-size: 14px; line-height: 1.0;}
+                                .slider {height: 490px; }
+                                .slider__item {margin: 7.5%; width: 35%; height: 365px;}
+                                .text_bot{font-size: 13px;}
+                                .text_top{font-size: 15px;}
+                                .calculator_text_top{font-size: 16px;}
+                                .calculator_text_mid{font-size: 17px;}
+                                .block_calculator_input { width: 100%; font-size: 21px;}
+                                .input_name_calculator {font-size: 16px;}
+                                .indent_1 {height: 710px;}
+                                .bot_text{font-size: 15px;}
+                                .bot_number_button{padding: 10px;}
+                            }
+
+@media (min-width: 991px) and (max-width: 1200px){
+    .main_link{display: none;}
     .mobile{display: none;}
 
     .head_text{font-size: 17px;}
@@ -697,9 +787,14 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .text_left{font-size: 15px;}
     .text_right{font-size: 14px;}
     .indent_1 {height: 400px;}
-    .button_icon{height: 22px; width: 22px;}
+    /* .button_icon{height: 22px; width: 22px;}
+    .button_text{font-size: 14px;}
+    .button{height: 26px; padding: 0px; margin-top: 7px;} */
+    .button_interior_block{}
+    .button_icon{height: 22px; width: 22px; margin: 3px;}
     .button_text{font-size: 14px;}
     .button{height: 26px; padding: 0px; margin-top: 7px;}
+    .col{ margin-left: 0;}
     /* slaider */
     .slider {height: 600px;}
     .slider__arrow {width: 33%}
@@ -707,13 +802,9 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .slider__container.left{left: -33.3%}
     .shadow_slider_left{width: 40%;}
     .shadow_slider_right{width: 40%;}
-    .car_name{font-size: 28px;}
-    .remainder{font-size: 20px;}
-    .remainder_b{font-size: 21px;}
-    .discount{font-size: 16px;}
     .text_catalog{font-size: 24px;}
-    .text_top{font-size: 18px;}
-    .text_bot{font-size: 16px;}
+    .text_top{font-size: 17px;}
+    .text_bot{font-size: 15px;}
 
     .indent_2 {height: 30px;}
     /* calculator */
@@ -728,6 +819,7 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .bot_text{font-size: 16px;}
 }
 @media (min-width: 1200px) and (max-width: 1500px){
+    .main_link{display: none;}
     .mobile{display: none;}
 
     .text_main{font-size: 22px;}
@@ -736,11 +828,12 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .indent_1 {height: 400px;}
     .button_icon{height: 25px; width: 25px;}
     .button_text{font-size: 14px;}
-    .button{height: 35px;padding: 5px; margin-top: 12px;}
+    .button{height: 35px;padding: 5px; margin-top: 12px; width: 100%;}
+    .col{ margin-left: 0;}
 
     .text_catalog{font-size: 32px;}
-    .text_top{font-size: 15px;}
-    .text_bot{font-size: 14px;}
+    .text_top{font-size: 14px;}
+    .text_bot{font-size: 12px;}
 
     .indent_2 {height: 30px;}
     /* calculator */
@@ -755,6 +848,7 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .bot_text{font-size: 18px;}
 }
 @media (min-width: 1500px) and (max-width: 2100px){
+    .main_link{display: none;}
     .mobile{display: none;}
 
     .text_main{font-size: 34px;}
@@ -764,9 +858,12 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .button_icon{height: 35px; width: 35px;}
     .button_text{font-size: 20px;}
     .button{width: 100%; height: 45px; padding: 7px; margin-top: 12px;}
+    .col{margin-left: 0;}
+
     .text_catalog{font-size: 32px;}
     .text_top{font-size: 18px;}
     .text_bot{font-size: 16px;}
+
 
     .indent_2 {height: 30px;}
     /* calculator */
@@ -782,6 +879,7 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
 }
 
 @media (min-width: 2100px) and (max-width: 2560px){
+    .main_link{display: none;}
     .mobile{display: none}
 
     .text_main{font-size: 42px;}
@@ -789,6 +887,7 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .text_right{font-size: 30px;}
     .indent_1 {height: 640px;}
     .button{margin-top: 20px;}
+    .col{margin-left: 0}
 
     .text_catalog{font-size: 39px;}
     .text_top{font-size: 23px;}
@@ -805,6 +904,7 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .bot_text{font-size: 23px;}
 }
 @media (min-width: 2560px) and (max-width: 8000px){
+    .main_link{display: none;}
     .mobile{display: none;}
     /* head_bg */
     .KIA_icon   {height: 80px;}
@@ -816,6 +916,7 @@ div.button:active { background: rgb(152,15,0); box-shadow: 0 14px 28px rgba(204,
     .text_right{font-size: 30px;}
     .indent_1 {height: 740px;}
     .button{margin-top: 30px;}
+    .col{margin-left: 0}
 
     .text_catalog{font-size: 39px;}
     .text_top{font-size: 23px;}

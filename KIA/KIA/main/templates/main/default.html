@@ -23,7 +23,7 @@
          <div class="indent_1"></div>
          <div class="container main">
              <!-- slaider -->
-             <div class="ball_slaider_block">
+             <div class="ball_slaider_block pc">
                 <a href="../"><div class="ball_slaider active_slide"></div></a>
                 <a href="../rio/"><div class="ball_slaider"></div></a>
                 <a href="../sportage/"><div class="ball_slaider"></div></a>
@@ -36,12 +36,32 @@
             <div class="indent_2"></div>
 
              <!-- img -->
-            <div class="row">
+            <div class="row pc">
                 <div class="col">
                     <img src="{% static 'images/default.png' %}" alt="KIA" id="KIA_main">
                 </div>
             </div>
 
+            <!-- адаптив под мобилки -->
+            <div class="row mobile">
+                <a href="../optima/">
+                    <div class="col default_mobile">
+                        <img src="{% static 'images/default_mobile.png' %}" alt="KIA" id="KIA_main">
+                    </div>
+                </a>
+            </div>
+           <!-- <div class="row mobile">
+               <a href="../optima/" class="slider_main_list_mobile mobile"><img class="main_sale_mobile" src="{% static 'images/main_sale_mobile.png' %}" alt=""></a>
+               <div class="border_block_right">
+                   <p class="text_title_min">Осталось в наличии</p>
+                   <p class="text_title_max">2 автомобиля</p>
+                   <br>
+               </div>
+               <div class="border_block_left">
+                   <p class="text_title_min">Выгода до</p>
+                   <p class="text_title_max">98 000 руб</p>
+               </div>
+            </div> -->
        <!-- По сути костыль который нужен для отступа эллемента... -->
        <div class="indent_3"></div>
        <!-- Кнопки -->

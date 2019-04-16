@@ -8,14 +8,15 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'style/font.css' %}">
         <link rel="stylesheet" href="{% static 'style/head_bg_in.css' %}">
-        <link rel="stylesheet" href="{% static 'style/calculator_text.css' %}">
         <link rel="stylesheet" href="{% static 'style/slaider_interior.css' %}">
+        <link rel="stylesheet" href="{% static 'style/calculator_text.css' %}">
         <link rel="stylesheet" href="{% static 'style/foot.css' %}">
+        <!-- адаптив -->
         <link rel="stylesheet" href="{% static 'style/main_block_interior.css' %}">
     </head>
     <body >
+        <div class="js_overlay"></div>
         {% include 'template/head.html' %}
-
         <!-- По сути костыль который нужен для отступа эллемента... -->
         <div class="indent_1"></div>
         <div class="main pc">
@@ -24,8 +25,8 @@
                 <p class="text_main">Новый Ceed JD</p>
                 <p><span class="text_left">В наличии:</span> <span class="text_right"> <b> 5 автомобилей</b> </span> <br></p>
                 <span class="text_left">Выгода:</span> <span class="text_right"> <b>69 000 р</b> </span>  <br>  <br>  <br>
-                <div class="">
-                {% include 'template/button_interior.html' %}
+                <div class="button_interior_block">
+                {% include 'template/button.html' %}
                 </div>
             </div>
         </div>
@@ -44,6 +45,7 @@
                   <p class="text_title_max">120 000 руб</p>
               </div>
             </div>
+            <div class="indent_5"></div>
             {% include 'template/button.html' %}
         </div>
 
