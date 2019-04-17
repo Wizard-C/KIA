@@ -1,0 +1,16 @@
+.text_margin_bot {
+margin-top: 40px;
+}
+.bot {
+    text-align: center;
+    width: 100%;
+    height: 70px;   /* Высота блока "footer" */
+}
+.bot_text {
+    margin: 20px;
+    font-family: "KiaM";
+    position: relative;
+    text-align: center;
+    display: inline;
+    /* margin: 40px; */
+}
