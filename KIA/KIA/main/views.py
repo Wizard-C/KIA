@@ -1,4 +1,6 @@
 from django.shortcuts import render
+
+from main.models import Car_model_inl
 # callback form
 
 # from .forms import NameForm
@@ -42,6 +44,11 @@ def test(request):
 
 
 # Страницы сайта
+def inl_demo(request):
+    list_car = {'cars': Car_model_inl.objects.all()}
+    return render(request, 'main/demo_inl.html', list_car)
+
+
 def default(request):
     return render(request, 'main/default.html')
 
