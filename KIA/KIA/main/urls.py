@@ -10,6 +10,7 @@ urlpatterns = [
     path('rio/', views.rio, name='rio'),
     path('sportage/', views.sportage, name='sportage'),
     path('default/', views.default, name='default'),
+    path('inl_demo/', views.inl_demo, name='inl_demo'),
 
     #Шаблоны
     # path('head/', views.head, name='head'),

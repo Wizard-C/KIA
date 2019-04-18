@@ -66,7 +66,7 @@ for row_number in range(len_sheet):
         result_inl = Car_model_inl(
             car_name_inl = sheet.cell_value(row_number, 0).lower(),
             component = sheet.cell_value(row_number, 1).lower(),
-            color = sheet.cell_value(row_number, 3).lower(),
+            color = sheet.cell_value(row_number, 2).lower(),
             engine =  sheet.cell_value(row_number, 4).lower(),
             year =  sheet.cell_value(row_number, 6).lower(),
         )
