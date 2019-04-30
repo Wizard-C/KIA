@@ -1,0 +1,67 @@
+{% load static %}
+    <div class="slider">
+        <!-- тени -->
+        <div class="shadow_slider_right pc"></div>
+        <div class="shadow_slider_left pc"></div>
+        <!-- кнопочки -->
+        <div class="slider__arrow slider__left"><img class="slider_mobile_left mobile" src="{% static 'images/slider_mobile_left.png' %}" alt=""></div>
+        <div class="slider__arrow slider__right"><img class="slider_mobile_right mobile" src="{% static 'images/slider_mobile_right.png' %}" alt=""></div>
+        <div class="slider__container">
+            <!-- Костыль из-за которого нужно многократно дублировать блоки слайдера в хтмл  -->
+            {% for car in cars %}
+                <div class="slider__item">
+                        <img class="img car_slider" src="{% static 'images/car_main/{{ car.car_name_main }}.jpg' %}">
+                        <p class="car_name">{{ car.car_name_main }}</p>
+                        <p class="remainder">Осталось в продаже:</p>
+                        <p class="remainder_b">{{ car.quantity }}</p>
+                        <div class="discount">Выгода: <b> {{ car.discount }} </b>руб.</div>
+                        <div class="img_slider_div pc">
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.svg' %}" alt=""></a>
+                            <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.svg' %}" alt=""></a>
+                        </div>
+                </div>
+            {% endfor %}
+            <div class="slider__item">
+                    <img class="img car_slider" src="{% static 'images/slaider/ceed1.png' %}">
+                    <p class="car_name">Новый CEED</p>
+                    <p class="remainder">Осталось в продаже:</p>
+                    <p class="remainder_b">5 автомобилей</p>
+                    <div class="discount">Выгода: <b> 39 000 </b>руб.</div>
+                    <div class="img_slider_div pc">
+                        <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.svg' %}" alt=""></a>
+                        <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.svg' %}" alt=""></a>
+                        <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.svg' %}" alt=""></a>
+                    </div>
+            </div>
+            <div class="slider__item">
+                <img class="img car_slider" src="{% static 'images/slaider/stinger.png' %}">
+                <p class="car_name">Stinger</p>
+                <p class="remainder">Осталось в продаже:</p>
+                <p class="remainder_b">4 автомобиля</p>
+                <div class="discount">Выгода: <b> 56 000 </b>руб.</div>
+                <div class="img_slider_div pc">
+                    <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.svg' %}" alt=""></a>
+                    <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.svg' %}" alt=""></a>
+                    <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.svg' %}" alt=""></a>
+                </div>
+            </div>
+            <div class="slider__item">
+                <img class="img car_slider" src="{% static 'images/slaider/sorento.png' %}">
+                <p class="car_name">SORENTO</p>
+                <p class="remainder">Осталось в продаже:</p>
+                <p class="remainder_b">6 автомобилей</p>
+                <div class="discount">Выгода: <b> 69 000 </b>руб.</div>
+                <div class="img_slider_div pc">
+                    <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive.svg' %}" alt=""></a>
+                    <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info.svg' %}" alt=""></a>
+                    <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support.svg' %}" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="img_slider_div_mobile mobile">
+            <a href="#"><img class="img_slaider_solo js_button_click_active_test" src="{% static 'images/Test-Drive_mobile.svg' %}" alt=""></a>
+            <a href="#"><img class="img_slaider_solo js_button_click_active_more" src="{% static 'images/Info_mobile.svg' %}" alt=""></a>
+            <a href="#"><img class="img_slaider_solo js_button_click_active_consule" src="{% static 'images/Support_mobile.svg' %}" alt=""></a>
+        </div>
+    </div>

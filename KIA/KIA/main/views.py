@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from main.models import Car_model_inl
+from main.models import Car_model_main
 # callback form
 
 # from .forms import NameForm
@@ -42,6 +43,14 @@ def slider(request):
 def test(request):
     return render(request, 'template/test.html')
 
+# Разработка динамики
+def main(request):
+    list_car = {'cars': Car_model_main.objects.all()}
+    return render(request, 'main/main.html', list_car)
+
+def interior_main(request, Car_model_inl_id):
+    list_car = {'cars': Car_model_inl.objects.all()}
+    return render(request, 'main/interior_main.html', list_car)
 
 # Страницы сайта
 def inl_demo(request):

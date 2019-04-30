@@ -20,3 +20,6 @@ print('Отправляю письмо')
 session.sendmail(sender, mail_receiver, message)
 
 # Как вариант рабочий код
+
+# https://docs.google.com/document/d/1mqeUMUNVVgjbqCorfT40nAkkIn1bT9JryTYNMDqx5g8/edit
+# Словарь кодера

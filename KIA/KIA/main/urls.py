@@ -12,6 +12,9 @@ urlpatterns = [
     path('default/', views.default, name='default'),
     path('inl_demo/', views.inl_demo, name='inl_demo'),
 
+    path('main/', views.main, name='main'),
+    path('main/<int:Car_model_inl_id>/', views.interior_main, name='interior_main'),
+
     #Шаблоны
     # path('head/', views.head, name='head'),
     # path('foot/', views.foot, name='foot'),
